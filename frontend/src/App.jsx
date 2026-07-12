@@ -63,10 +63,7 @@ function App() {
 
     setError("");
 
-    const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/calculate`,
-      formData
-    );
+    const response = await axios.post("https://ecolens-ai-ykno.onrender.com/calculate", formData);
 
 
     setResult(response.data);
