@@ -191,62 +191,91 @@ function App() {
       <section className="landing-hero">
 
 
+  <div className="hero-badge">
 
-        <h1>
+    🌍 AI Powered Sustainability Platform
 
-          🌱 EcoLens AI
-
-        </h1>
-
-
-
-        <h2>
-
-          AI-Powered Carbon Footprint Monitoring Platform
-
-        </h2>
+  </div>
 
 
 
+  <h1>
 
-        <p>
+    🌱 EcoLens AI
 
-          Measure your environmental impact,
+  </h1>
 
-          analyze emissions and receive
 
-          personalized sustainability recommendations.
 
-        </p>
+  <h2>
+
+    Understand Your Carbon Impact.
+    <br />
+    Build a Greener Future With AI.
+
+  </h2>
 
 
 
 
-        <button
+  <p>
 
-          onClick={() =>
+    Track your carbon footprint,
+    discover your biggest emission sources,
+    and receive intelligent recommendations
+    to reduce your environmental impact.
 
-            document
-
-              .querySelector("#calculator")
-
-              ?.scrollIntoView({
-
-                behavior: "smooth"
-
-              })
-
-          }
-
-        >
-
-          Calculate Your Footprint
-
-        </button>
+  </p>
 
 
 
-      </section>
+
+  <div className="hero-buttons">
+
+
+    <button
+
+      onClick={() =>
+        document
+          .querySelector("#calculator")
+          ?.scrollIntoView({
+            behavior:"smooth"
+          })
+      }
+
+    >
+
+      Calculate Footprint 🌱
+
+    </button>
+
+
+
+    <button
+
+      className="secondary-btn"
+
+      onClick={() =>
+        document
+          .querySelector("#features")
+          ?.scrollIntoView({
+            behavior:"smooth"
+          })
+      }
+
+    >
+
+      Explore Features
+
+    </button>
+
+
+
+  </div>
+
+
+
+</section>
 
 
 
