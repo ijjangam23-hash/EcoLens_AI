@@ -287,124 +287,87 @@ function App() {
 
 
 
-      <section
+     <section
+  className="features"
+  id="features"
+>
 
-        className="features"
+<div className="feature-card">
 
-        id="features"
+  <div className="feature-icon">
+    🌍
+  </div>
 
-      >
+  <h3>
+    Carbon Tracking
+  </h3>
 
+  <p>
+    Calculate emissions from transport,
+    electricity, food and waste.
+  </p>
 
+</div>
 
 
-        <div className="feature-card">
 
+<div className="feature-card">
 
-          <h3>
+  <div className="feature-icon">
+    🤖
+  </div>
 
-            🌍 Carbon Tracking
+  <h3>
+    AI Intelligence
+  </h3>
 
-          </h3>
+  <p>
+    Get AI-based sustainability
+    insights and suggestions.
+  </p>
 
+</div>
 
-          <p>
 
-            Calculate emissions from transport,
 
-            electricity, food and waste.
+<div className="feature-card">
 
-          </p>
+  <div className="feature-icon">
+    📊
+  </div>
 
+  <h3>
+    Analytics Dashboard
+  </h3>
 
-        </div>
+  <p>
+    Visualize your carbon impact
+    using interactive charts.
+  </p>
 
+</div>
 
 
 
+<div className="feature-card">
 
+  <div className="feature-icon">
+    📄
+  </div>
 
+  <h3>
+    PDF Reports
+  </h3>
 
-        <div className="feature-card">
+  <p>
+    Generate detailed carbon
+    footprint reports.
+  </p>
 
+</div>
 
-          <h3>
 
-            🤖 AI Intelligence
-
-          </h3>
-
-
-          <p>
-
-            Get AI-based sustainability
-
-            insights and suggestions.
-
-          </p>
-
-
-        </div>
-
-
-
-
-
-
-
-        <div className="feature-card">
-
-
-          <h3>
-
-            📊 Analytics Dashboard
-
-          </h3>
-
-
-          <p>
-
-            Visualize your carbon impact
-
-            using interactive charts.
-
-          </p>
-
-
-        </div>
-
-
-
-
-
-
-
-        <div className="feature-card">
-
-
-          <h3>
-
-            📄 PDF Reports
-
-          </h3>
-
-
-          <p>
-
-            Generate detailed carbon
-
-            footprint reports.
-
-          </p>
-
-
-        </div>
-
-
-
-
-
-      </section>
+</section>
 
 
 
