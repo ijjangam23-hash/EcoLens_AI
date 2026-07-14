@@ -28,6 +28,7 @@ function CarbonChart({ result }) {
     ],
 
     datasets: [
+
       {
 
         data: [
@@ -37,6 +38,7 @@ function CarbonChart({ result }) {
           result.waste
         ],
 
+
         backgroundColor: [
           "#4CAF50",
           "#FFC107",
@@ -44,23 +46,49 @@ function CarbonChart({ result }) {
           "#9E9E9E"
         ],
 
-        borderWidth: 1
+
+        borderWidth: 2
 
       }
+
     ]
 
   };
 
 
+
   const options = {
 
-    responsive: true,
 
-    plugins: {
+    responsive:true,
 
-      legend: {
 
-        position: "bottom"
+    maintainAspectRatio:false,
+
+
+    plugins:{
+
+
+      legend:{
+
+
+        position:"bottom",
+
+
+        labels:{
+
+
+          padding:20,
+
+
+          font:{
+
+
+            size:14
+
+          }
+
+        }
 
       }
 
@@ -69,11 +97,15 @@ function CarbonChart({ result }) {
   };
 
 
+
+
   return (
 
-    <div className="chart">
+  <div className="chart">
 
-      <h2>📊 Carbon Contribution</h2>
+    <h2>📊 Carbon Contribution</h2>
+
+    <div className="pie-container">
 
       <Pie
         data={data}
@@ -82,7 +114,10 @@ function CarbonChart({ result }) {
 
     </div>
 
-  );
+  </div>
+
+);
+
 
 }
 

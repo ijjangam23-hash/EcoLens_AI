@@ -10,13 +10,13 @@
 }
 
 
-
 body {
 
   margin:0;
 
   font-family:
   "Segoe UI",
+  "Inter",
   Arial,
   sans-serif;
 
@@ -28,18 +28,99 @@ body {
 
 
 
-
 .container {
 
-  width:90%;
+  width:100%;
 
   max-width:1200px;
 
   margin:auto;
 
-  padding:30px 0;
+  padding:20px;
 
 }
+
+
+
+
+/* =========================
+   Navbar
+========================= */
+
+
+.navbar {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  background:white;
+
+  padding:18px 30px;
+
+  border-radius:20px;
+
+  margin-bottom:60px;
+
+  box-shadow:
+
+  0 8px 20px rgba(0,0,0,0.08);
+
+  position:sticky;
+
+  top:20px;
+
+  z-index:100;
+
+}
+
+
+
+.logo {
+
+  font-size:26px;
+
+  font-weight:800;
+
+  color:#15803d;
+
+}
+
+
+
+.nav-links {
+
+  display:flex;
+
+  gap:25px;
+
+}
+
+
+
+.nav-links a {
+
+  text-decoration:none;
+
+  color:#374151;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+  color:#15803d;
+
+}
+
+
 
 
 
@@ -50,43 +131,127 @@ body {
 ========================= */
 
 
-.hero {
+.landing-hero {
 
   text-align:center;
 
-  margin-bottom:40px;
+  padding:70px 25px;
+
+  background:white;
+
+  border-radius:30px;
+
+  margin-bottom:45px;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,0.08);
 
 }
 
 
 
-.hero h1 {
+.landing-hero h1 {
 
-  font-size:44px;
+  font-size:52px;
 
   color:#15803d;
 
-  margin-bottom:10px;
+  margin-bottom:15px;
 
 }
 
 
 
-.subtitle {
+.landing-hero h2 {
 
-  font-size:22px;
+  font-size:28px;
 
-  font-weight:600;
+  color:#166534;
 
 }
 
 
 
-.description {
+.landing-hero p {
+
+  max-width:700px;
+
+  margin:25px auto;
+
+  font-size:18px;
 
   color:#666;
 
-  font-size:17px;
+  line-height:1.7;
+
+}
+
+/* =========================
+   Features
+========================= */
+
+
+.features {
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+  margin-bottom:45px;
+
+}
+
+
+
+.feature-card {
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  text-align:center;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,0.08);
+
+  border-top:5px solid #15803d;
+
+  transition:0.3s;
+
+}
+
+
+
+.feature-card:hover {
+
+  transform:translateY(-5px);
+
+}
+
+
+
+.feature-card h3 {
+
+  color:#166534;
+
+  font-size:22px;
+
+}
+
+
+
+.feature-card p {
+
+  color:#666;
+
+  line-height:1.6;
 
 }
 
@@ -103,10 +268,9 @@ body {
 
 .form-card {
 
-
   background:white;
 
-  padding:35px;
+  padding:40px;
 
   border-radius:25px;
 
@@ -114,18 +278,24 @@ body {
 
   0 10px 25px rgba(0,0,0,0.08);
 
-}
+  margin-bottom:40px;
 
+}
 
 
 
 .form-card h2 {
 
+  text-align:center;
+
   color:#166534;
 
-  margin-bottom:25px;
+  font-size:28px;
+
+  margin-bottom:30px;
 
 }
+
 
 
 
@@ -138,6 +308,8 @@ label {
 
   font-weight:600;
 
+  color:#374151;
+
 }
 
 
@@ -147,10 +319,9 @@ label {
 input,
 select {
 
-
   width:100%;
 
-  padding:13px;
+  padding:14px;
 
   margin-top:8px;
 
@@ -166,10 +337,8 @@ select {
 
 
 
-
 input:focus,
 select:focus {
-
 
   border-color:#15803d;
 
@@ -178,14 +347,21 @@ select:focus {
 
 
 
-button {
 
+
+
+/* =========================
+   Buttons
+========================= */
+
+
+button {
 
   width:100%;
 
   margin-top:30px;
 
-  padding:15px;
+  padding:15px 30px;
 
   border:none;
 
@@ -209,8 +385,9 @@ button {
 
 button:hover {
 
-
   background:#166534;
+
+  transform:translateY(-2px);
 
 }
 
@@ -221,12 +398,11 @@ button:hover {
 
 
 /* =========================
-   Loading Card
+   Loading Section
 ========================= */
 
 
 .ai-loading-card {
-
 
   margin-top:35px;
 
@@ -248,19 +424,19 @@ button:hover {
 
 .ai-loading-card h2 {
 
-
   color:#15803d;
 
 }
 
 
 
+
+
 .ai-steps {
 
+  background:#ecfdf5;
 
-  background:#f0fdf4;
-
-  padding:20px;
+  padding:25px;
 
   margin:25px 0;
 
@@ -274,7 +450,6 @@ button:hover {
 
 .ai-steps div {
 
-
   margin:12px 0;
 
   color:#166534;
@@ -285,8 +460,10 @@ button:hover {
 
 
 
-.loader {
 
+
+
+.loader {
 
   width:45px;
 
@@ -309,14 +486,16 @@ button:hover {
 @keyframes spin {
 
 
-  100%{
+100% {
 
-    transform:rotate(360deg);
+transform:rotate(360deg);
 
-  }
+}
 
 
 }
+
+
 
 
 
@@ -328,7 +507,6 @@ button:hover {
 
 
 .error-card {
-
 
   margin-top:25px;
 
@@ -345,121 +523,109 @@ button:hover {
   font-weight:600;
 
 }
+/* =========================
+   Carbon Dashboard
+========================= */
 
 
+.result-section {
+
+  margin-top:50px;
+
+}
+
+
+
+.result-section > h2 {
+
+  text-align:center;
+
+  font-size:36px;
+
+  font-weight:700;
+
+  color:#166534;
+
+  margin-bottom:45px;
+
+}
 
 
 
 
 
 /* =========================
-   Carbon Dashboard Cards
+   Carbon Cards
 ========================= */
-
-
-.result-section {
-
-
-  margin-top:40px;
-
-}
-
-
-
-
-.result-section > h2 {
-
-
-  color:#166534;
-
-  text-align:center;
-
-  margin-bottom:30px;
-
-}
-
-
 
 
 .cards {
 
-
   display:grid;
-
 
   grid-template-columns:
 
   repeat(auto-fit,minmax(220px,1fr));
 
-
   gap:25px;
 
-
 }
+
 
 
 
 
 .carbon-card {
 
-
   background:white;
 
-  padding:28px;
+  padding:35px 25px;
 
   border-radius:22px;
 
   text-align:center;
 
-  border-top:5px solid #15803d;
-
   box-shadow:
 
-  0 8px 20px rgba(0,0,0,0.08);
-
+  0 8px 25px rgba(0,0,0,0.08);
 
   transition:0.3s;
 
-
 }
+
 
 
 
 
 .carbon-card:hover {
 
-
-  transform:translateY(-5px);
-
+  transform:translateY(-6px);
 
 }
-
 
 
 
 .icon {
 
-
   font-size:42px;
 
+  margin-bottom:15px;
+
 }
-
-
 
 
 
 .carbon-card h3 {
 
+  font-size:21px;
 
-  font-size:20px;
+  color:#374151;
 
 }
 
 
 
-
 .carbon-value {
-
 
   font-size:34px;
 
@@ -467,7 +633,7 @@ button:hover {
 
   color:#15803d;
 
-  margin:10px 0;
+  margin:18px 0;
 
 }
 
@@ -475,12 +641,19 @@ button:hover {
 
 .carbon-card span {
 
-
-  color:#666;
+  color:#6b7280;
 
   font-size:15px;
 
 }
+
+
+
+
+
+
+
+
 /* =========================
    Total Carbon Footprint
 ========================= */
@@ -488,57 +661,58 @@ button:hover {
 
 .total-carbon-card {
 
-
-  margin-top:40px;
+  margin-top:70px;
 
   background:white;
 
-  padding:35px 25px;
+  padding:50px 35px;
 
-  border-radius:25px;
+  border-radius:30px;
 
   text-align:center;
 
-  border-left:6px solid #15803d;
+  border-left:
+
+  7px solid #15803d;
 
   box-shadow:
 
-  0 10px 25px rgba(0,0,0,0.08);
-
+  0 12px 30px rgba(0,0,0,0.08);
 
 }
+
 
 
 
 
 .total-carbon-card h2 {
 
+  font-size:32px;
 
-  font-size:28px;
+  color:#166534;
 
-  color:#111827;
-
-  margin-bottom:15px;
-
+  margin-bottom:45px;
 
 }
+
+
 
 
 
 
 .total-carbon-value {
 
-
-  font-size:52px;
+  font-size:58px;
 
   font-weight:800;
 
   color:#15803d;
 
-  margin:10px 0;
-
+  margin:35px 0;
 
 }
+
+
 
 
 
@@ -546,13 +720,11 @@ button:hover {
 
 .carbon-period {
 
+  font-size:20px;
 
-  font-size:18px;
+  color:#6b7280;
 
-  color:#666;
-
-  margin-bottom:25px;
-
+  margin-bottom:30px;
 
 }
 
@@ -562,25 +734,21 @@ button:hover {
 
 .carbon-message {
 
-
-  max-width:650px;
+  max-width:700px;
 
   margin:auto;
 
-  padding:15px 20px;
+  padding:18px;
 
   background:#ecfdf5;
 
-  border-radius:15px;
+  border-radius:16px;
 
   color:#166534;
 
-  font-size:18px;
-
   font-weight:600;
 
-  line-height:1.5;
-
+  line-height:1.6;
 
 }
 
@@ -592,42 +760,87 @@ button:hover {
 
 
 /* =========================
+   Carbon Chart
+========================= */
+
+
+.chart {
+
+  margin-top:60px;
+
+  padding:35px;
+
+  background:white;
+
+  border-radius:25px;
+
+  text-align:center;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+
+
+
+
+.chart h2 {
+
+  color:#166534;
+
+  font-size:28px;
+
+  margin-bottom:35px;
+
+}
+
+
+
+.pie-container {
+
+  width:300px;
+
+  height:300px;
+
+  margin:auto;
+
+}
+/* =========================
    AI Carbon Intelligence
 ========================= */
 
 
 .ai-analysis-card {
 
-
-  margin-top:40px;
+  margin-top:70px;
 
   background:white;
 
-  padding:35px;
+  padding:45px;
 
   border-radius:30px;
 
   box-shadow:
 
-  0 15px 35px rgba(0,0,0,0.1);
-
+  0 15px 35px rgba(0,0,0,0.08);
 
 }
+
 
 
 
 
 .ai-analysis-card h2 {
 
-
   text-align:center;
+
+  font-size:32px;
 
   color:#166534;
 
-  font-size:30px;
-
-  margin-bottom:35px;
-
+  margin-bottom:45px;
 
 }
 
@@ -637,47 +850,60 @@ button:hover {
 
 
 
-.eco-score-box {
+/* =========================
+   Eco Score
+========================= */
 
+
+.eco-score-box {
 
   background:#ecfdf5;
 
-  padding:35px;
+  padding:40px;
 
   border-radius:25px;
 
   text-align:center;
 
+  margin-bottom:35px;
 
 }
+
 
 
 
 
 .eco-score-box h3 {
 
+  color:#166534;
 
   font-size:22px;
 
-  margin-bottom:10px;
-
-
 }
+
 
 
 
 
 .eco-score-number {
 
-
-  font-size:55px;
+  font-size:60px;
 
   font-weight:800;
 
   color:#15803d;
 
-  margin:20px 0 35px;
+  margin:25px 0;
 
+}
+
+
+
+.eco-score-number span {
+
+  font-size:28px;
+
+  color:#6b7280;
 
 }
 
@@ -685,21 +911,25 @@ button:hover {
 
 
 
+
+/* =========================
+   Progress Bar
+========================= */
+
+
 .score-progress {
 
+  width:85%;
 
-  width:90%;
-
-  height:18px;
-
-  margin:auto;
+  height:16px;
 
   background:#d1d5db;
 
-  border-radius:30px;
+  border-radius:20px;
+
+  margin:25px auto;
 
   overflow:hidden;
-
 
 }
 
@@ -709,25 +939,13 @@ button:hover {
 
 .score-progress-fill {
 
-
   height:100%;
 
-  background:
+  background:#15803d;
 
-  linear-gradient(
+  border-radius:20px;
 
-  90deg,
-
-  #22c55e,
-
-  #15803d
-
-  );
-
-  border-radius:30px;
-
-  transition:width 1s ease;
-
+  transition:width 1.5s ease;
 
 }
 
@@ -735,21 +953,32 @@ button:hover {
 
 
 
+
+
+/* =========================
+   Impact Status
+========================= */
 
 
 .impact-status {
 
+  margin:35px auto;
 
-  margin:35px 0;
+  max-width:650px;
+
+  padding:20px;
 
   text-align:center;
 
-  font-size:22px;
+  background:#ecfdf5;
 
-  font-weight:700;
+  border-radius:20px;
 
   color:#166534;
 
+  font-size:21px;
+
+  font-weight:700;
 
 }
 
@@ -758,19 +987,26 @@ button:hover {
 
 
 
-.analysis-details {
 
+/* =========================
+   Analysis Details
+========================= */
+
+
+.analysis-details {
 
   display:grid;
 
   grid-template-columns:
 
-  repeat(auto-fit,minmax(220px,1fr));
+  repeat(auto-fit,minmax(240px,1fr));
 
-  gap:20px;
+  gap:25px;
 
+  margin-top:35px;
 
 }
+
 
 
 
@@ -778,37 +1014,25 @@ button:hover {
 
 .analysis-details p {
 
+  background:#f8fafc;
 
-  background:#f8faf8;
+  padding:30px;
 
-  padding:20px;
-
-  border-radius:18px;
-
-  margin:0;
-
-}
-
-
-
-
-.ai-message {
-
-
-  margin-top:25px;
-
-  padding:25px;
-
-  background:#166534;
-
-  color:white;
+  min-height:140px;
 
   border-radius:20px;
 
-  font-size:17px;
+  border-left:
 
-  line-height:1.6;
+  5px solid #15803d;
 
+  box-shadow:
+
+  0 8px 20px rgba(0,0,0,0.05);
+
+  text-align:center;
+
+  line-height:1.7;
 
 }
 
@@ -820,40 +1044,136 @@ button:hover {
 
 
 /* =========================
-   Eco Summary
+   AI Sustainability Insight
 ========================= */
 
 
-.eco-summary-card {
-
+.ai-message {
 
   margin-top:40px;
 
-  background:white;
-
   padding:30px;
 
-  border-radius:25px;
+  background:#ecfdf5;
 
-  box-shadow:
+  color:#166534;
 
-  0 10px 25px rgba(0,0,0,0.08);
+  border-radius:20px;
 
+  border-left:
+
+  6px solid #15803d;
+
+  line-height:1.8;
+
+  font-size:16px;
 
 }
 
 
 
 
-.eco-summary-card h2 {
 
+.ai-message h3 {
+
+  color:#166534;
+
+  margin-bottom:15px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   AI Confidence
+========================= */
+
+
+.ai-confidence {
+
+  margin-top:35px;
+
+  padding:30px;
+
+  background:#f8fafc;
+
+  border-radius:20px;
+
+  text-align:center;
+
+}
+
+
+
+
+
+.ai-confidence h3 {
+
+  color:#166534;
+
+}
+
+
+
+
+
+.ai-confidence p {
+
+  font-size:42px;
+
+  font-weight:800;
+
+  color:#15803d;
+
+  margin:15px;
+
+}
+
+
+
+
+
+.ai-confidence span {
+
+  color:#6b7280;
+
+}
+/* =========================
+   Eco Summary
+========================= */
+
+
+.eco-summary-card {
+
+  margin-top:50px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:30px;
+
+  box-shadow:
+
+  0 12px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.eco-summary-card h2 {
 
   text-align:center;
 
   color:#15803d;
 
-  margin-bottom:30px;
+  font-size:30px;
 
+  margin-bottom:35px;
 
 }
 
@@ -863,15 +1183,13 @@ button:hover {
 
 .summary-grid {
 
-
   display:grid;
 
   grid-template-columns:
 
   repeat(auto-fit,minmax(220px,1fr));
 
-  gap:20px;
-
+  gap:25px;
 
 }
 
@@ -881,17 +1199,27 @@ button:hover {
 
 .summary-item {
 
+  background:#f8fafc;
 
-  background:#f8faf8;
+  padding:30px;
 
-  padding:22px;
-
-  border-radius:18px;
+  border-radius:20px;
 
   text-align:center;
 
-  border-left:5px solid #15803d;
+  border-left:
 
+  5px solid #15803d;
+
+  transition:0.3s;
+
+}
+
+
+
+.summary-item:hover {
+
+  transform:translateY(-5px);
 
 }
 
@@ -901,26 +1229,29 @@ button:hover {
 
 .summary-item h3 {
 
+  color:#374151;
 
-  font-size:17px;
-
+  font-size:18px;
 
 }
+
 
 
 
 
 .summary-item p {
 
-
-  font-size:25px;
+  font-size:28px;
 
   font-weight:800;
 
   color:#15803d;
 
+  margin-top:15px;
 
 }
+
+
 
 
 
@@ -928,14 +1259,13 @@ button:hover {
 
 .summary-message {
 
+  margin-top:35px;
 
-  margin-top:25px;
-
-  padding:20px;
+  padding:22px;
 
   background:#ecfdf5;
 
-  border-radius:15px;
+  border-radius:18px;
 
   text-align:center;
 
@@ -943,8 +1273,17 @@ button:hover {
 
   font-weight:600;
 
+  line-height:1.6;
 
 }
+
+
+
+
+
+
+
+
 /* =========================
    AI Recommendations
 ========================= */
@@ -952,42 +1291,43 @@ button:hover {
 
 .recommendation {
 
-
-  margin-top:40px;
+  margin-top:50px;
 
   background:white;
 
-  padding:30px;
+  padding:40px;
 
-  border-radius:25px;
+  border-radius:30px;
 
   box-shadow:
 
-  0 10px 25px rgba(0,0,0,0.08);
-
+  0 12px 30px rgba(0,0,0,0.08);
 
 }
+
 
 
 
 
 .recommendation h2 {
 
-
   text-align:center;
 
   color:#15803d;
 
-  margin-bottom:30px;
+  font-size:30px;
 
+  margin-bottom:35px;
 
 }
 
 
 
 
-.recommendation-grid {
 
+
+
+.recommendation-grid {
 
   display:grid;
 
@@ -995,9 +1335,7 @@ button:hover {
 
   repeat(auto-fit,minmax(250px,1fr));
 
-
-  gap:20px;
-
+  gap:25px;
 
 }
 
@@ -1005,25 +1343,27 @@ button:hover {
 
 
 
+
+
 .recommendation-card {
 
+  background:#f8fafc;
 
-  background:#f8faf8;
+  padding:25px;
 
-  padding:22px;
+  border-radius:20px;
 
-  border-radius:18px;
+  border-left:
+
+  5px solid #15803d;
 
   display:flex;
 
   align-items:center;
 
-  gap:15px;
-
-  border-left:5px solid #15803d;
+  gap:18px;
 
   transition:0.3s;
-
 
 }
 
@@ -1033,13 +1373,7 @@ button:hover {
 
 .recommendation-card:hover {
 
-
   transform:translateY(-5px);
-
-  box-shadow:
-
-  0 10px 20px rgba(0,0,0,0.08);
-
 
 }
 
@@ -1049,26 +1383,24 @@ button:hover {
 
 .recommendation-icon {
 
-
   font-size:35px;
 
-
 }
+
 
 
 
 
 .recommendation-card p {
 
-
   margin:0;
 
-  line-height:1.5;
+  line-height:1.7;
 
-  font-size:16px;
-
+  color:#374151;
 
 }
+
 
 
 
@@ -1082,16 +1414,19 @@ button:hover {
 ========================= */
 
 
-.recommendation p {
+.simulator-card {
 
+  margin-top:50px;
 
-  background:#f8faf8;
+  background:white;
 
-  padding:15px;
+  padding:40px;
 
-  border-radius:12px;
+  border-radius:30px;
 
-  margin:12px 0;
+  box-shadow:
+
+  0 12px 30px rgba(0,0,0,0.08);
 
 }
 
@@ -1099,15 +1434,197 @@ button:hover {
 
 
 
-.recommendation p b {
+.simulator-card h2 {
 
+  text-align:center;
+
+  color:#15803d;
+
+  font-size:30px;
+
+  margin-bottom:35px;
+
+}
+
+
+
+
+
+
+
+.simulation-grid {
+
+  display:grid;
+
+  grid-template-columns:
+
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+}
+
+
+
+
+
+
+
+.simulation-box {
+
+  background:#ecfdf5;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  border-left:
+
+  5px solid #15803d;
+
+}
+
+
+
+
+
+
+
+.simulation-box h3 {
 
   color:#166534;
 
+  font-size:18px;
 
 }
 
 
+
+
+
+
+
+.simulation-box p {
+
+  font-size:26px;
+
+  font-weight:800;
+
+  color:#15803d;
+
+  margin:15px 0;
+
+}
+
+
+
+
+
+.simulation-box span {
+
+  color:#6b7280;
+
+  font-size:14px;
+
+}
+
+
+
+
+
+
+
+.simulation-message {
+
+  margin-top:35px;
+
+  padding:25px;
+
+  background:#166534;
+
+  color:white;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  font-size:17px;
+
+  line-height:1.7;
+
+}
+/* =========================
+   Final Typography Polish
+========================= */
+
+
+h1,
+h2,
+h3 {
+
+  letter-spacing:0.3px;
+
+}
+
+
+
+p {
+
+  line-height:1.7;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   PDF Download Button
+========================= */
+
+
+.result-section > button {
+
+  margin-top:50px;
+
+  background:#166534;
+
+  font-size:18px;
+
+  padding:16px;
+
+  border-radius:16px;
+
+}
+
+
+
+.result-section > button:hover {
+
+  background:#14532d;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Smooth Scrolling
+========================= */
+
+
+html {
+
+  scroll-behavior:smooth;
+
+}
 
 
 
@@ -1120,50 +1637,86 @@ button:hover {
 ========================= */
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
 
 .container {
 
-
   width:95%;
 
   padding:15px 0;
 
+}
+
+
+
+
+.navbar {
+
+  flex-direction:column;
+
+  gap:18px;
+
+  padding:20px;
 
 }
 
 
 
 
-.hero h1 {
+.nav-links {
 
+  flex-wrap:wrap;
 
-  font-size:32px;
+  justify-content:center;
 
-
-}
-
-
-
-
-.subtitle {
-
-
-  font-size:18px;
-
+  gap:15px;
 
 }
 
 
 
 
-.description {
+.landing-hero {
+
+  padding:40px 20px;
+
+}
 
 
-  font-size:14px;
 
+
+.landing-hero h1 {
+
+  font-size:36px;
+
+}
+
+
+
+
+.landing-hero h2 {
+
+  font-size:22px;
+
+}
+
+
+
+
+.landing-hero p {
+
+  font-size:15px;
+
+}
+
+
+
+
+.features {
+
+  grid-template-columns:1fr;
 
 }
 
@@ -1173,24 +1726,22 @@ button:hover {
 
 .form-card {
 
-
-  padding:20px;
-
-  border-radius:18px;
-
+  padding:25px;
 
 }
+
+
 
 
 
 
 button {
 
-
   width:100%;
 
-
 }
+
+
 
 
 
@@ -1198,34 +1749,21 @@ button {
 
 .cards {
 
-
   grid-template-columns:1fr;
 
-
 }
+
+
 
 
 
 
 .carbon-card {
 
-
-  padding:22px;
-
+  padding:25px;
 
 }
 
-
-
-
-
-.carbon-value {
-
-
-  font-size:30px;
-
-
-}
 
 
 
@@ -1233,20 +1771,18 @@ button {
 
 .total-carbon-card {
 
-
-  padding:25px 15px;
-
+  padding:30px 20px;
 
 }
 
 
 
 
+
+
 .total-carbon-card h2 {
 
-
-  font-size:22px;
-
+  font-size:25px;
 
 }
 
@@ -1256,20 +1792,7 @@ button {
 
 .total-carbon-value {
 
-
-  font-size:36px;
-
-
-}
-
-
-
-
-.carbon-period {
-
-
-  font-size:15px;
-
+  font-size:45px;
 
 }
 
@@ -1277,59 +1800,61 @@ button {
 
 
 
-.carbon-message {
+.chart {
 
-
-  font-size:15px;
-
+  padding:20px;
 
 }
+
+
+
+
+
+.pie-container {
+
+  width:250px;
+
+  height:250px;
+
+}
+
 
 
 
 
 .ai-analysis-card {
 
-
-  padding:20px;
-
-  border-radius:20px;
-
+  padding:25px 20px;
 
 }
+
 
 
 
 
 .ai-analysis-card h2 {
 
-
-  font-size:23px;
-
+  font-size:25px;
 
 }
+
 
 
 
 
 .eco-score-box {
 
-
-  padding:22px;
-
+  padding:25px;
 
 }
 
 
 
 
+
 .eco-score-number {
 
-
-  font-size:42px;
-
-  margin:15px 0 25px;
-
+  font-size:45px;
 
 }
 
@@ -1339,30 +1864,17 @@ button {
 
 .score-progress {
 
-
   width:100%;
-
-  height:14px;
-
 
 }
 
 
 
 
+
 .impact-status {
 
-
   font-size:17px;
-
-  padding:12px;
-
-  margin:20px 0;
-
-  background:#ecfdf5;
-
-  border-radius:12px;
-
 
 }
 
@@ -1372,20 +1884,7 @@ button {
 
 .analysis-details {
 
-
   grid-template-columns:1fr;
-
-
-}
-
-
-
-
-.analysis-details p {
-
-
-  font-size:14px;
-
 
 }
 
@@ -1395,11 +1894,7 @@ button {
 
 .ai-message {
 
-
-  padding:18px;
-
-  font-size:15px;
-
+  padding:22px;
 
 }
 
@@ -1409,9 +1904,7 @@ button {
 
 .eco-summary-card {
 
-
-  padding:20px;
-
+  padding:25px 20px;
 
 }
 
@@ -1421,21 +1914,7 @@ button {
 
 .summary-grid {
 
-
   grid-template-columns:1fr;
-
-
-}
-
-
-
-
-
-.summary-item p {
-
-
-  font-size:22px;
-
 
 }
 
@@ -1445,9 +1924,7 @@ button {
 
 .recommendation {
 
-
-  padding:20px;
-
+  padding:25px 20px;
 
 }
 
@@ -1457,9 +1934,7 @@ button {
 
 .recommendation-grid {
 
-
   grid-template-columns:1fr;
-
 
 }
 
@@ -1469,9 +1944,29 @@ button {
 
 .recommendation-card {
 
+  flex-direction:column;
 
-  padding:18px;
+  text-align:center;
 
+}
+
+
+
+
+
+.simulator-card {
+
+  padding:25px 20px;
+
+}
+
+
+
+
+
+.simulation-grid {
+
+  grid-template-columns:1fr;
 
 }
 

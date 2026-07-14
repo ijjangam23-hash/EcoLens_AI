@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-
+from carbon_engine import calculate_total_carbon
+from recommendation_engine import generate_recommendations
+from analysis_engine import analyze_carbon
+from simulator import generate_simulation
 app = Flask(__name__)
 
 CORS(app)

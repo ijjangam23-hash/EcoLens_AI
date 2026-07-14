@@ -3,82 +3,120 @@ def generate_recommendations(data, result):
     recommendations = []
 
 
-    # Transport recommendations
-    if data["vehicle"] == "petrol_car" or data["vehicle"] == "diesel_car":
-
-        recommendations.append(
-            "Consider using public transport, cycling, or walking for short distances to reduce transport emissions."
-        )
-
-
-    elif data["vehicle"] == "bike":
-
-        recommendations.append(
-            "Your bike usage is better than a car, but cycling for short trips can further reduce emissions."
-        )
+    # Find major emission source
+    sources = {
+        "Transport": result["transport"],
+        "Electricity": result["electricity"],
+        "Food": result["food"],
+        "Waste": result["waste"]
+    }
 
 
-    elif data["vehicle"] == "cycle":
+    highest_source = max(
+        sources,
+        key=sources.get
+    )
 
-        recommendations.append(
-            "Great choice! Cycling produces almost zero direct carbon emissions."
-        )
+
+    # Priority recommendation
+
+    if highest_source == "Transport":
+
+        recommendations.append({
+            "category": "Transport",
+            "priority": "High",
+            "message":
+            "Transport is your biggest carbon contributor. "
+            "Reduce private vehicle usage, use public transport, "
+            "cycle, or carpool when possible."
+        })
 
 
-    # Electricity recommendations
+    elif highest_source == "Electricity":
+
+        recommendations.append({
+            "category": "Electricity",
+            "priority": "High",
+            "message":
+            "Electricity consumption is your largest contributor. "
+            "Use energy-efficient appliances and avoid unnecessary power usage."
+        })
+
+
+    elif highest_source == "Food":
+
+        recommendations.append({
+            "category": "Food",
+            "priority": "Medium",
+            "message":
+            "Food choices contribute significantly to your footprint. "
+            "Consider adding more plant-based meals."
+        })
+
+
+    elif highest_source == "Waste":
+
+        recommendations.append({
+            "category": "Waste",
+            "priority": "Medium",
+            "message":
+            "Waste generation is affecting your footprint. "
+            "Recycle, reuse, and reduce unnecessary waste."
+        })
+
+
+    # Additional personalized suggestions
+
+    if data["vehicle"] in ["petrol_car", "diesel_car"]:
+
+        recommendations.append({
+            "category": "Transport",
+            "priority": "Medium",
+            "message":
+            "Switching some trips to public transport or cycling can lower emissions."
+        })
+
+
     if float(data["electricity"]) > 300:
 
-        recommendations.append(
-            "Your electricity usage is high. Try using energy-efficient appliances and reducing unnecessary power consumption."
-        )
-
-    else:
-
-        recommendations.append(
-            "Your electricity consumption is under control. Continue saving energy."
-        )
+        recommendations.append({
+            "category": "Energy Saving",
+            "priority": "Medium",
+            "message":
+            "Your electricity usage is high. Consider LED lights and efficient devices."
+        })
 
 
-    # Food recommendations
     if data["diet"] == "high_meat":
 
-        recommendations.append(
-            "Reducing meat consumption can significantly lower your food carbon footprint."
-        )
-
-    elif data["diet"] == "medium_meat":
-
-        recommendations.append(
-            "Try adding more vegetarian meals to reduce food emissions."
-        )
-
-    elif data["diet"] == "vegetarian" or data["diet"] == "vegan":
-
-        recommendations.append(
-            "Your diet choice helps reduce food-related emissions."
-        )
+        recommendations.append({
+            "category": "Food",
+            "priority": "Medium",
+            "message":
+            "Reducing meat consumption can significantly reduce food emissions."
+        })
 
 
-    # Waste recommendations
-    if float(data["waste"]) > 5:
+    # Overall footprint analysis
 
-        recommendations.append(
-            "Reduce waste generation by recycling and reusing materials."
-        )
-
-
-    # Overall carbon score
     if result["total_carbon"] > 500:
 
-        recommendations.append(
-            "Your carbon footprint is high. Focus on reducing transport, electricity, and food emissions."
-        )
+        recommendations.append({
+            "category": "Overall",
+            "priority": "High",
+            "message":
+            "Your carbon footprint is high. Focus on reducing the highest contributing categories first."
+        })
+
 
     elif result["total_carbon"] < 200:
 
-        recommendations.append(
-            "Excellent! Your carbon footprint is relatively low."
-        )
+        recommendations.append({
+            "category": "Overall",
+            "priority": "Low",
+            "message":
+            "Great work! Your carbon footprint is relatively low."
+        })
 
 
     return recommendations

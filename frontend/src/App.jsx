@@ -20,10 +20,15 @@ function App() {
   const [formData, setFormData] = useState({
 
     vehicle: "bike",
+
     distance: 10,
+
     days: 25,
+
     electricity: 100,
+
     diet: "vegetarian",
+
     waste: 2
 
   });
@@ -49,38 +54,55 @@ function App() {
 
 
 
+
   const calculateCarbon = async () => {
 
+
     try {
+
 
       setLoading(true);
 
       setError("");
 
+
+
       const response = await axios.post(
+
         `${import.meta.env.VITE_API_URL}/calculate`,
+
         formData
+
       );
+
 
 
       setResult(response.data);
 
 
-    } catch (error) {
 
-      console.log(error);
+    } catch (err) {
+
+
+      console.log(err);
 
 
       setError(
-        "Backend is not running. Start the server and try again"
+
+        "Backend connection failed. Please start the backend server."
+
       );
+
 
 
     } finally {
 
+
       setLoading(false);
 
+
     }
+
 
   };
 
@@ -92,1303 +114,1824 @@ function App() {
 
   return (
 
-<div className="container">
 
+    <div className="container">
 
 
-{/* ================= LANDING HERO ================= */}
 
 
-<div className="landing-hero">
 
+      {/* ================= NAVBAR ================= */}
 
-<h1>
-🌱 EcoLens AI
-</h1>
 
+      <nav className="navbar">
 
-<h2>
-AI-Powered Carbon Footprint Monitoring Platform
-</h2>
 
 
-<p>
-Measure your environmental impact,
-analyze emissions and receive
-personalized sustainability recommendations.
-</p>
+        <div className="logo">
 
+          🌱 EcoLens AI
 
+        </div>
 
-<button
 
-onClick={() =>
-document
-.querySelector(".form-card")
-.scrollIntoView({
-behavior:"smooth"
-})
-}
 
->
 
-Calculate Your Footprint
+        <div className="nav-links">
 
-</button>
 
+          <a href="#">
 
+            Home
 
-</div>
+          </a>
 
 
 
+          <a href="#features">
 
+            Features
 
+          </a>
 
-{/* ================= FEATURES ================= */}
 
 
+          <a href="#calculator">
 
-<div className="features">
+            Calculator
 
+          </a>
 
 
-<div className="feature-card">
 
-<h3>
-🌍 Carbon Tracking
-</h3>
+          <a href="#dashboard">
 
-<p>
-Calculate emissions from transport,
-electricity, food and waste.
-</p>
+            Dashboard
 
-</div>
+          </a>
 
 
 
+        </div>
 
 
-<div className="feature-card">
 
-<h3>
-🤖 AI Intelligence
-</h3>
+      </nav>
 
-<p>
-Get personalized sustainability
-insights using AI analysis.
-</p>
 
-</div>
 
 
 
 
 
-<div className="feature-card">
+      {/* ================= HERO SECTION ================= */}
 
-<h3>
-📊 Analytics Dashboard
-</h3>
 
-<p>
-Visualize your carbon impact
-with interactive charts.
-</p>
 
-</div>
+      <section className="landing-hero">
 
 
 
+        <h1>
 
+          🌱 EcoLens AI
 
-<div className="feature-card">
+        </h1>
 
-<h3>
-📄 PDF Reports
-</h3>
 
-<p>
-Download detailed environmental
-impact reports.
-</p>
 
-</div>
+        <h2>
 
+          AI-Powered Carbon Footprint Monitoring Platform
 
+        </h2>
 
-</div>
 
 
 
+        <p>
 
+          Measure your environmental impact,
 
+          analyze emissions and receive
 
+          personalized sustainability recommendations.
 
-{/* ================= INPUT FORM ================= */}
+        </p>
 
 
 
-<div className="form-card">
 
+        <button
 
+          onClick={() =>
 
-<h2>
-Enter Lifestyle Details
-</h2>
+            document
 
+              .querySelector("#calculator")
 
+              ?.scrollIntoView({
 
+                behavior: "smooth"
 
+              })
 
-<label>
-Vehicle
-</label>
+          }
 
+        >
 
+          Calculate Your Footprint
 
-<select
+        </button>
 
-name="vehicle"
 
-value={formData.vehicle}
 
-onChange={handleChange}
+      </section>
 
->
 
 
-<option value="cycle">
-Cycle
-</option>
 
 
-<option value="bike">
-Bike
-</option>
 
 
-<option value="petrol_car">
-Petrol Car
-</option>
+      {/* ================= FEATURES ================= */}
 
 
-<option value="diesel_car">
-Diesel Car
-</option>
 
+      <section
 
-<option value="bus">
-Bus
-</option>
+        className="features"
 
+        id="features"
 
-<option value="electric_vehicle">
-Electric Vehicle
-</option>
+      >
 
 
-</select>
 
 
+        <div className="feature-card">
 
 
+          <h3>
 
+            🌍 Carbon Tracking
 
+          </h3>
 
-<label>
-Distance per day (km)
-</label>
 
+          <p>
 
+            Calculate emissions from transport,
 
-<input
+            electricity, food and waste.
 
-type="number"
+          </p>
 
-name="distance"
 
-value={formData.distance}
+        </div>
 
-onChange={handleChange}
 
-/>
 
 
 
 
 
+        <div className="feature-card">
 
 
-<label>
-Travel Days
-</label>
+          <h3>
 
+            🤖 AI Intelligence
 
+          </h3>
 
-<input
 
-type="number"
+          <p>
 
-name="days"
+            Get AI-based sustainability
 
-value={formData.days}
+            insights and suggestions.
 
-onChange={handleChange}
+          </p>
 
-/>
 
+        </div>
 
 
 
 
 
 
-<label>
-Electricity Units/month
-</label>
 
+        <div className="feature-card">
 
 
-<input
+          <h3>
 
-type="number"
+            📊 Analytics Dashboard
 
-name="electricity"
+          </h3>
 
-value={formData.electricity}
 
-onChange={handleChange}
+          <p>
 
-/>
+            Visualize your carbon impact
 
+            using interactive charts.
 
+          </p>
 
 
+        </div>
 
 
 
-<label>
-Diet
-</label>
 
 
 
-<select
 
-name="diet"
+        <div className="feature-card">
 
-value={formData.diet}
 
-onChange={handleChange}
+          <h3>
 
->
+            📄 PDF Reports
 
+          </h3>
 
-<option value="vegan">
-Vegan
-</option>
 
+          <p>
 
-<option value="vegetarian">
-Vegetarian
-</option>
+            Generate detailed carbon
 
+            footprint reports.
 
-<option value="medium_meat">
-Medium Meat
-</option>
+          </p>
 
 
-<option value="high_meat">
-High Meat
-</option>
+        </div>
 
 
-</select>
 
 
 
+      </section>
 
 
 
 
-<label>
-Waste per week (kg)
-</label>
 
 
 
-<input
 
-type="number"
 
-name="waste"
+      {/* ================= INPUT FORM ================= */}
 
-value={formData.waste}
 
-onChange={handleChange}
 
-/>
+      <section
 
+        className="form-card"
 
+        id="calculator"
 
+      >
 
 
 
+        <h2>
 
-<button
+          Enter Lifestyle Details
 
-onClick={calculateCarbon}
+        </h2>
 
->
 
-Calculate Footprint
 
-</button>
 
 
 
 
+        <label>
 
-</div>
-{/* ================= LOADING ================= */}
+          Vehicle
 
+        </label>
 
-{loading && (
 
-<div className="ai-loading-card">
 
+        <select
 
-<h2>
-🤖 AI Carbon Engine
-</h2>
+          name="vehicle"
 
+          value={formData.vehicle}
 
-<p>
-Analyzing your lifestyle data...
-</p>
+          onChange={handleChange}
 
+        >
 
 
-<div className="ai-steps">
 
+          <option value="cycle">
 
-<div>
-✓ Calculating carbon emissions
-</div>
+            Cycle
 
+          </option>
 
-<div>
-✓ Finding highest contributor
-</div>
 
 
-<div>
-✓ Generating sustainability insights
-</div>
+          <option value="bike">
 
+            Bike
 
-</div>
+          </option>
 
 
 
-<div className="loader"></div>
+          <option value="petrol_car">
 
+            Petrol Car
 
-<p className="wait-text">
-Please wait...
-</p>
+          </option>
 
 
 
-</div>
+          <option value="diesel_car">
 
-)}
+            Diesel Car
 
+          </option>
 
 
 
+          <option value="bus">
 
-{/* ================= ERROR ================= */}
+            Bus
 
+          </option>
 
-{error && (
 
-<div className="error-card">
 
-⚠️ {error}
+          <option value="electric_vehicle">
 
-</div>
+            Electric Vehicle
 
-)}
+          </option>
 
 
 
+        </select>
 
 
 
 
-{/* ================= RESULT DASHBOARD ================= */}
 
 
 
-{result && (
+        <label>
 
+          Distance per day (km)
 
-<div className="result-section">
+        </label>
 
 
 
-<h2>
-📊 Carbon Dashboard
-</h2>
+        <input
 
+          type="number"
 
+          name="distance"
 
+          value={formData.distance}
 
+          onChange={handleChange}
 
+        />
 
 
-<div className="cards">
 
 
 
 
 
-<div className="carbon-card">
+        <label>
 
+          Travel Days
 
-<div className="icon">
-🚗
-</div>
+        </label>
 
 
-<h3>
-Transport
-</h3>
 
+        <input
 
-<p className="carbon-value">
+          type="number"
 
-{result.transport}
+          name="days"
 
-</p>
+          value={formData.days}
 
+          onChange={handleChange}
 
-<span>
-kg CO₂
-</span>
+        />
 
 
-</div>
 
 
 
 
 
+        <label>
 
+          Electricity Units / Month
 
+        </label>
 
 
-<div className="carbon-card">
 
+        <input
 
-<div className="icon">
-⚡
-</div>
+          type="number"
 
+          name="electricity"
 
-<h3>
-Electricity
-</h3>
+          value={formData.electricity}
 
+          onChange={handleChange}
 
-<p className="carbon-value">
+        />
 
-{result.electricity}
 
-</p>
 
 
-<span>
-kg CO₂
-</span>
 
 
-</div>
 
+        <label>
 
+          Diet
 
+        </label>
 
 
 
+        <select
 
+          name="diet"
 
+          value={formData.diet}
 
-<div className="carbon-card">
+          onChange={handleChange}
 
+        >
 
-<div className="icon">
-🍃
-</div>
 
 
-<h3>
-Food
-</h3>
+          <option value="vegan">
 
+            Vegan
 
-<p className="carbon-value">
+          </option>
 
-{result.food}
 
-</p>
 
+          <option value="vegetarian">
 
-<span>
-kg CO₂
-</span>
+            Vegetarian
 
+          </option>
 
-</div>
 
 
+          <option value="medium_meat">
 
+            Medium Meat
 
+          </option>
 
 
 
+          <option value="high_meat">
 
+            High Meat
 
-<div className="carbon-card">
+          </option>
 
 
-<div className="icon">
-♻️
-</div>
 
+        </select>
 
-<h3>
-Waste
-</h3>
 
 
-<p className="carbon-value">
 
-{result.waste}
 
-</p>
 
 
-<span>
-kg CO₂
-</span>
+        <label>
 
+          Waste per week (kg)
 
-</div>
+        </label>
 
 
 
+        <input
 
-</div>
+          type="number"
 
+          name="waste"
 
+          value={formData.waste}
 
+          onChange={handleChange}
 
+        />
 
 
 
 
 
-{/* Total Carbon */}
 
 
+        <button
 
-<div className="total-carbon-card">
+          onClick={calculateCarbon}
 
+        >
 
+          Calculate Footprint 🌱
 
-<h2>
-🌍 Total Carbon Footprint
-</h2>
+        </button>
 
 
 
 
-<p className="total-carbon-value">
 
-{result.total_carbon} kg CO₂
+      </section>
+            {/* ================= LOADING ================= */}
 
-</p>
 
+      {loading && (
 
 
-<p className="carbon-period">
+        <div className="ai-loading-card">
 
-Monthly Environmental Impact
 
-</p>
+          <h2>
 
+            🤖 AI Carbon Engine
 
+          </h2>
 
 
 
+          <p>
 
-<div className="carbon-message">
+            Analyzing your lifestyle data...
 
+          </p>
 
-{
 
-result.analysis?.impact_level === "Low"
 
-?
 
-"🌱 Excellent! Your lifestyle has a low carbon impact."
 
-:
+          <div className="ai-steps">
 
-result.analysis?.impact_level === "Moderate"
 
-?
+            <div>
 
-"⚖️ Your footprint is moderate. Small changes can improve it."
+              ✓ Calculating carbon emissions
 
-:
+            </div>
 
-"⚠️ Your footprint is high. Consider sustainable alternatives."
 
-}
 
+            <div>
 
-</div>
+              ✓ Finding highest contributor
 
+            </div>
 
 
-</div>
 
+            <div>
 
+              ✓ Generating sustainability insights
 
+            </div>
 
 
 
+          </div>
 
 
 
-{/* Carbon Visualization */}
 
 
+          <div className="loader"></div>
 
-<CarbonChart result={result}/>
 
 
 
+          <p>
 
+            Please wait...
 
+          </p>
 
 
 
+        </div>
 
-{/* ================= AI INTELLIGENCE ================= */}
 
+      )}
 
 
 
-{result.analysis && (
 
 
-<div className="ai-analysis-card">
 
 
+      {/* ================= ERROR ================= */}
 
 
 
-<h2>
-🤖 AI Carbon Intelligence
-</h2>
+      {error && (
 
 
+        <div className="error-card">
 
 
+          ⚠️ {error}
 
 
+        </div>
 
 
-<div className="eco-score-box">
+      )}
 
 
-<h3>
-🌱 Eco Score
-</h3>
 
 
 
 
-<p className="eco-score-number">
 
-{result.analysis?.eco_score}/100
 
-</p>
 
+      {/* ================= RESULT DASHBOARD ================= */}
 
 
 
+      {result && (
 
-<div className="score-progress">
 
 
-<div
+        <section
 
-className="score-progress-fill"
+          className="result-section"
 
-style={{
+          id="dashboard"
 
-width:`${result.analysis?.eco_score}%`
+        >
+
+
+
+
+          <h2>
+
+            📊 Carbon Dashboard
+
+          </h2>
+
+
+
+
+
+
+
+          {/* Carbon Cards */}
+
+
+
+          <div className="cards">
+
+
+
+
+
+            <div className="carbon-card">
+
+
+              <div className="icon">
+
+                🚗
+
+              </div>
+
+
+
+              <h3>
+
+                Transport
+
+              </h3>
+
+
+
+              <p className="carbon-value">
+
+                {result.transport}
+
+              </p>
+
+
+
+              <span>
+
+                kg CO₂
+
+              </span>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div className="carbon-card">
+
+
+              <div className="icon">
+
+                ⚡
+
+              </div>
+
+
+
+              <h3>
+
+                Electricity
+
+              </h3>
+
+
+
+              <p className="carbon-value">
+
+                {result.electricity}
+
+              </p>
+
+
+
+              <span>
+
+                kg CO₂
+
+              </span>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div className="carbon-card">
+
+
+              <div className="icon">
+
+                🍃
+
+              </div>
+
+
+
+              <h3>
+
+                Food
+
+              </h3>
+
+
+
+              <p className="carbon-value">
+
+                {result.food}
+
+              </p>
+
+
+
+              <span>
+
+                kg CO₂
+
+              </span>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <div className="carbon-card">
+
+
+              <div className="icon">
+
+                ♻️
+
+              </div>
+
+
+
+              <h3>
+
+                Waste
+
+              </h3>
+
+
+
+              <p className="carbon-value">
+
+                {result.waste}
+
+              </p>
+
+
+
+              <span>
+
+                kg CO₂
+
+              </span>
+
+
+
+            </div>
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          {/* ================= TOTAL CARBON ================= */}
+
+
+
+
+          <div className="total-carbon-card">
+
+
+
+            <h2>
+
+              🌍 Total Carbon Footprint
+
+            </h2>
+
+
+
+
+
+            <p className="total-carbon-value">
+
+
+              {result.total_carbon} kg CO₂
+
+
+            </p>
+
+
+
+
+
+            <p className="carbon-period">
+
+
+              Monthly Environmental Impact
+
+
+            </p>
+
+
+
+
+
+
+            <div className="carbon-message">
+
+
+              {
+
+                result.analysis?.impact_level === "Low"
+
+                  ?
+
+                  "🌱 Excellent! Your lifestyle has a low carbon impact."
+
+                  :
+
+                  result.analysis?.impact_level === "Moderate"
+
+                    ?
+
+                    "⚖️ Your footprint is moderate. Small improvements can reduce it."
+
+                    :
+
+                    "⚠️ Your footprint is high. Sustainable changes are recommended."
+
+              }
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          {/* ================= CHART ================= */}
+
+
+
+          <CarbonChart result={result} />
+
+
+
+
+
+
+
+
+
+          {/* ================= AI CARBON INTELLIGENCE ================= */}
+
+
+
+          {result.analysis && (
+
+
+
+            <div className="ai-analysis-card">
+
+
+
+
+
+              <h2>
+
+                🤖 AI Carbon Intelligence
+
+              </h2>
+
+
+
+
+
+
+
+
+
+              <div className="eco-score-box">
+
+
+
+                <h3>
+
+                  🌱 Eco Score
+
+                </h3>
+
+
+
+
+
+                <p className="eco-score-number">
+
+
+                  {result.analysis.eco_score}
+
+                  <span>
+
+                    /100
+
+                  </span>
+
+
+                </p>
+
+
+
+
+
+
+                <div className="score-progress">
+
+
+                  <div
+
+
+                    className="score-progress-fill"
+
+
+                    style={{
+
+
+                      width:
+
+                        `${result.analysis.eco_score}%`
+
+
+                    }}
+
+
+                  >
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+
+
+                <p>
+
+                  AI calculated sustainability score
+
+                </p>
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="impact-status">
+
+
+                {
+
+
+                  result.analysis.eco_score >= 80
+
+                    ?
+
+                    "🟢 Excellent Environmental Impact"
+
+
+                    :
+
+                    result.analysis.eco_score >= 50
+
+                      ?
+
+                      "🟡 Moderate Environmental Impact"
+
+
+                      :
+
+                      "🔴 Needs Improvement"
+
+
+
+                }
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="analysis-details">
+
+
+
+
+
+                <div>
+
+
+                  <p>
+
+
+                    📊
+
+                    <br />
+
+
+                    <b>
+
+                      Impact Level
+
+                    </b>
+
+
+                    <br />
+
+
+                    {result.analysis.impact_level}
+
+
+                  </p>
+
+
+                </div>
+
+
+
+
+
+
+
+                <div>
+
+
+                  <p>
+
+
+                    ⚡
+
+                    <br />
+
+
+                    <b>
+
+                      Highest Contributor
+
+                    </b>
+
+
+                    <br />
+
+
+
+                    {result.analysis.highest_contributor}
+
+
+
+                    <br />
+
+
+                    {result.analysis.highest_contributor_value}
+
+                    kg CO₂
+
+
+
+                  </p>
+
+
+                </div>
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="ai-message">
+
+
+
+                <h3>
+
+                  💡 AI Sustainability Insight
+
+                </h3>
+
+
+
+
+                <p>
+
+                  {result.analysis.analysis_message}
+
+                </p>
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div className="ai-confidence">
+
+
+
+                <h3>
+
+                  🤖 AI Confidence
+
+                </h3>
+
+
+
+
+                <p>
+
+                  92%
+
+                </p>
+
+
+
+                <span>
+
+                  Based on transport, electricity,
+
+                  food and waste analysis.
+
+                </span>
+
+
+
+              </div>
+
+
+
+
+
+
+            </div>
+
+
+
+          )}
+                {/* ================= ECO SUMMARY ================= */}
+
+
+
+      <div className="eco-summary-card">
+
+
+
+        <h2>
+
+          🌱 Eco Summary
+
+        </h2>
+
+
+
+
+
+        <div className="summary-grid">
+
+
+
+
+
+          <div className="summary-item">
+
+
+            <h3>
+
+              🌍 Total Emission
+
+            </h3>
+
+
+
+            <p>
+
+              {result.total_carbon} kg CO₂
+
+            </p>
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <div className="summary-item">
+
+
+            <h3>
+
+              ⭐ Eco Score
+
+            </h3>
+
+
+
+            <p>
+
+              {result.analysis?.eco_score}/100
+
+            </p>
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <div className="summary-item">
+
+
+            <h3>
+
+              ⚡ Main Contributor
+
+            </h3>
+
+
+
+            <p>
+
+              {result.analysis?.highest_contributor}
+
+            </p>
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <div className="summary-item">
+
+
+            <h3>
+
+              📉 Saving Potential
+
+            </h3>
+
+
+
+            <p>
+
+
+              {result.simulation?.potential_saving || 0}
+
+              {" "}kg CO₂
+
+
+            </p>
+
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div className="summary-message">
+
+
+          💡
+
+          Your next goal:
+
+          Reduce your highest emission source
+
+          to improve your Eco Score.
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+      {/* ================= AI RECOMMENDATIONS ================= */}
+
+
+
+      <div className="recommendation">
+
+
+
+
+
+        <h2>
+
+          🌱 AI Sustainability Recommendations
+
+        </h2>
+
+
+
+
+
+
+        <div className="recommendation-grid">
+
+
+
+          {
+
+            result.recommendations?.map(
+
+              (item,index)=>(
+
+
+                <div
+
+                  className="recommendation-card"
+
+                  key={index}
+
+                >
+
+
+
+                  <div className="recommendation-icon">
+
+
+                    {
+
+                      index === 0
+
+                        ?
+
+                        "🚗"
+
+                        :
+
+                        index === 1
+
+                          ?
+
+                          "⚡"
+
+                          :
+
+                          "🌱"
+
+                    }
+
+
+                  </div>
+
+
+
+
+
+                  <p>
+
+                    {item}
+
+                  </p>
+
+
+
+                </div>
+
+
+              )
+
+
+            )
+
+
+          }
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+      {/* ================= CARBON REDUCTION SIMULATOR ================= */}
+
+
+
+
+
+      {
+
+        result.simulation && (
+
+
+
+          <div className="simulator-card">
+
+
+
+
+
+            <h2>
+
+              🌍 AI Carbon Reduction Simulator
+
+            </h2>
+
+
+
+
+
+
+
+            <div className="simulation-grid">
+
+
+
+
+
+              <div className="simulation-box">
+
+
+                <h3>
+
+                  🚘 Current Choice
+
+                </h3>
+
+
+
+                <p>
+
+                  {result.simulation.current_vehicle}
+
+                </p>
+
+
+
+                <span>
+
+                  Current lifestyle option
+
+                </span>
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div className="simulation-box">
+
+
+                <h3>
+
+                  🌱 Recommended Choice
+
+                </h3>
+
+
+
+                <p>
+
+                  {result.simulation.recommended_vehicle}
+
+                </p>
+
+
+
+                <span>
+
+                  AI suggested alternative
+
+                </span>
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+              <div className="simulation-box">
+
+
+                <h3>
+
+                  📉 Saving Potential
+
+                </h3>
+
+
+
+                <p>
+
+                  {result.simulation.potential_saving}
+
+                </p>
+
+
+
+                <span>
+
+                  kg CO₂/month
+
+                </span>
+
+
+
+              </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div className="simulation-message">
+
+
+              🤖 AI Prediction:
+
+
+              <br />
+
+
+              Switching to sustainable choices
+
+              can reduce emissions and improve
+
+              your Eco Score.
+
+
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+
+
+        )
+
+
+      }
+
+
+
+
+
+
+
+
+
+      {/* ================= PDF REPORT ================= */}
+
+
+
+
+
+      <button
+
+onClick={() => {
+
+  try {
+
+    console.log("PDF Button Clicked");
+
+    console.log(result);
+
+    downloadPDF(result, formData);
+
+
+  } catch(error) {
+
+    console.error(
+      "PDF Generation Error:",
+      error
+    );
+
+    alert(
+      "PDF generation failed. Check console."
+    );
+
+  }
 
 }}
 
 >
 
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div className="impact-status">
-
-
-
-{
-
-result.analysis?.eco_score >= 80
-
-?
-
-"🟢 Excellent Environmental Impact"
-
-
-:
-
-result.analysis?.eco_score >= 50
-
-?
-
-"🟡 Moderate Environmental Impact"
-
-
-:
-
-"🔴 Needs Improvement"
-
-
-}
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div className="analysis-details">
-
-
-
-<p>
-
-📊
-
-{" "}
-
-<b>
-Impact Level:
-</b>
-
-
-{" "}
-
-{result.analysis?.impact_level}
-
-
-</p>
-
-
-
-
-
-
-
-
-<p>
-
-⚡
-
-{" "}
-
-<b>
-Highest Contributor:
-</b>
-
-
-{" "}
-
-{result.analysis?.highest_contributor}
-
-
-{" "}
-
-(
-
-{result.analysis?.highest_contributor_value}
-
-kg CO₂)
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div className="ai-message">
-
-
-💡
-
-{" "}
-
-{result.analysis?.analysis_message}
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-)}
-{/* ================= ECO SUMMARY ================= */}
-
-
-
-<div className="eco-summary-card">
-
-
-<h2>
-🌱 Eco Summary
-</h2>
-
-
-
-
-<div className="summary-grid">
-
-
-
-
-
-<div className="summary-item">
-
-
-<h3>
-🌍 Total Emission
-</h3>
-
-
-<p>
-
-{result.total_carbon} kg CO₂
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div className="summary-item">
-
-
-<h3>
-⭐ Eco Score
-</h3>
-
-
-<p>
-
-{result.analysis?.eco_score}/100
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div className="summary-item">
-
-
-<h3>
-⚡ Main Contributor
-</h3>
-
-
-<p>
-
-{result.analysis?.highest_contributor}
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div className="summary-item">
-
-
-<h3>
-📉 Saving Potential
-</h3>
-
-
-<p>
-
-{result.simulation?.potential_saving}
-
-{" "}
-
-kg CO₂
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div className="summary-message">
-
-
-💡
-
-Your next goal:
-
-Reduce your highest emission source
-to improve your environmental impact.
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-{/* ================= AI RECOMMENDATIONS ================= */}
-
-
-
-
-<div className="recommendation">
-
-
-
-<h2>
-🌱 AI Sustainability Recommendations
-</h2>
-
-
-
-
-
-
-
-<div className="recommendation-grid">
-
-
-
-{
-
-result.recommendations?.map(
-
-(item,index)=>(
-
-
-
-<div
-
-className="recommendation-card"
-
-key={index}
-
->
-
-
-
-<div className="recommendation-icon">
-
-
-{
-
-index === 0
-
-?
-
-"🚗"
-
-:
-
-index === 1
-
-?
-
-"⚡"
-
-:
-
-"🌱"
-
-}
-
-
-</div>
-
-
-
-
-
-<p>
-
-{item}
-
-</p>
-
-
-
-</div>
-
-
-
-)
-
-
-)
-
-
-
-}
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-{/* ================= CARBON SIMULATOR ================= */}
-
-
-
-
-
-{
-
-result.simulation && (
-
-
-
-<div className="recommendation">
-
-
-
-<h2>
-🌍 Carbon Reduction Simulator
-</h2>
-
-
-
-
-
-
-<p>
-
-🚘
-
-{" "}
-
-<b>
-Current Vehicle:
-</b>
-
-{" "}
-
-{result.simulation?.current_vehicle}
-
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-🌱
-
-{" "}
-
-<b>
-Recommended Vehicle:
-</b>
-
-{" "}
-
-{result.simulation?.recommended_vehicle}
-
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-📉
-
-{" "}
-
-<b>
-Potential Saving:
-</b>
-
-{" "}
-
-{result.simulation?.potential_saving}
-
-{" "}
-
-kg CO₂/month
-
-
-</p>
-
-
-
-
-</div>
-
-
-
-)
-
-}
-
-
-
-
-
-
-
-
-
-{/* ================= PDF REPORT ================= */}
-
-
-
-
-<button
-
-
-onClick={() =>
-downloadPDF(result, formData)
-}
-
-
->
-
-
 📄 Download Carbon Report
-
 
 </button>
 
@@ -1397,20 +1940,28 @@ downloadPDF(result, formData)
 
 
 
+
+
+
+    </section>
+
+
+
+  )}
+
+
+
+
+
 </div>
 
 
-)}
 
-
-
-</div>
-
-
-);
+  );
 
 
 }
+
 
 
 export default App;
