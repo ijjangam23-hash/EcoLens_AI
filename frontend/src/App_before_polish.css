@@ -2,47 +2,49 @@
    Global Styles
 ========================= */
 
+
 * {
-  box-sizing: border-box;
+
+  box-sizing:border-box;
+
 }
+
 
 body {
 
   margin:0;
 
   font-family:
-  "Inter",
   "Segoe UI",
+  "Inter",
   Arial,
   sans-serif;
 
-  background:
-  linear-gradient(
-    135deg,
-    #f0fdf4,
-    #ecfeff
-  );
+  background:#f3f7f4;
 
   color:#1f2937;
 
 }
 
 
+
 .container {
 
   width:100%;
 
-  max-width:1250px;
+  max-width:1200px;
 
   margin:auto;
 
-  padding:25px;
+  padding:20px;
 
 }
 
 
+
+
 /* =========================
-   Navbar Premium
+   Navbar
 ========================= */
 
 
@@ -54,31 +56,31 @@ body {
 
   align-items:center;
 
-  background:rgba(255,255,255,0.85);
+  background:white;
 
-  backdrop-filter:blur(12px);
+  padding:18px 30px;
 
-  padding:18px 35px;
+  border-radius:20px;
 
-  border-radius:25px;
-
-  margin-bottom:50px;
+  margin-bottom:60px;
 
   box-shadow:
-  0 15px 35px rgba(0,0,0,0.08);
+
+  0 8px 20px rgba(0,0,0,0.08);
 
   position:sticky;
 
-  top:15px;
+  top:20px;
 
   z-index:100;
 
 }
 
 
+
 .logo {
 
-  font-size:28px;
+  font-size:26px;
 
   font-weight:800;
 
@@ -92,7 +94,7 @@ body {
 
   display:flex;
 
-  gap:30px;
+  gap:25px;
 
 }
 
@@ -114,15 +116,18 @@ body {
 
 .nav-links a:hover {
 
-  color:#16a34a;
-
-  transform:translateY(-2px);
+  color:#15803d;
 
 }
 
 
+
+
+
+
+
 /* =========================
-   Hero Premium
+   Hero Section
 ========================= */
 
 
@@ -130,42 +135,29 @@ body {
 
   text-align:center;
 
-  padding:90px 30px;
+  padding:70px 25px;
 
   background:white;
 
-  border-radius:35px;
+  border-radius:30px;
 
-  margin-bottom:50px;
+  margin-bottom:45px;
 
   box-shadow:
 
-  0 20px 50px rgba(0,0,0,0.08);
+  0 10px 25px rgba(0,0,0,0.08);
 
 }
 
 
+
 .landing-hero h1 {
 
-  font-size:clamp(38px,7vw,64px);
+  font-size:52px;
 
-  font-weight:900;
+  color:#15803d;
 
-  line-height:1.1;
-
-  margin-bottom:20px;
-
-  background:
-
-  linear-gradient(
-  90deg,
-  #15803d,
-  #22c55e
-  );
-
-  -webkit-background-clip:text;
-
-  color:transparent;
+  margin-bottom:15px;
 
 }
 
@@ -173,14 +165,9 @@ body {
 
 .landing-hero h2 {
 
-
+  font-size:28px;
 
   color:#166534;
-   font-size:clamp(22px,4vw,30px);
-
-  line-height:1.3;
-
-  margin-top:20px;
 
 }
 
@@ -188,57 +175,33 @@ body {
 
 .landing-hero p {
 
-  max-width:750px;
+  max-width:700px;
 
   margin:25px auto;
 
-  font-size:19px;
-
-  line-height:1.7;
-
-  color:#64748b;
-
-}
-
-
-
-.landing-hero button {
-
-  width:auto;
-
-  padding:16px 40px;
-
-  border-radius:50px;
-
   font-size:18px;
 
-  box-shadow:
+  color:#666;
 
-  0 10px 25px rgba(21,128,61,0.3);
-
-}
-
-
-.landing-hero button:hover {
-
-  transform:translateY(-3px);
+  line-height:1.7;
 
 }
 
 /* =========================
-   Premium Feature Cards
+   Features
 ========================= */
+
 
 .features {
 
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fit,minmax(250px,1fr));
+  repeat(auto-fit,minmax(220px,1fr));
 
-  gap:30px;
+  gap:25px;
 
-  margin:60px 0;
+  margin-bottom:45px;
 
 }
 
@@ -246,130 +209,51 @@ body {
 
 .feature-card {
 
-  position:relative;
+  background:white;
 
-  background:
+  padding:30px;
 
-  linear-gradient(
-  145deg,
-  #ffffff,
-  #f0fdf4
-  );
+  border-radius:25px;
 
-  padding:35px 30px;
-
-  border-radius:30px;
-
-  text-align:left;
-
-  overflow:hidden;
-
-  border:1px solid rgba(21,128,61,0.12);
+  text-align:center;
 
   box-shadow:
 
-  0 15px 35px rgba(0,0,0,0.08);
+  0 10px 25px rgba(0,0,0,0.08);
 
-  transition:all 0.4s ease;
+  border-top:5px solid #15803d;
 
-}
-
-
-
-/* Glow Effect */
-
-.feature-card::before {
-
-  content:"";
-
-  position:absolute;
-
-  width:120px;
-
-  height:120px;
-
-  background:#22c55e;
-
-  opacity:0.15;
-
-  border-radius:50%;
-
-  top:-40px;
-
-  right:-40px;
+  transition:0.3s;
 
 }
 
 
-
-/* Hover */
 
 .feature-card:hover {
 
-  transform:
-
-  translateY(-12px);
-
-  box-shadow:
-
-  0 25px 50px rgba(21,128,61,0.18);
+  transform:translateY(-5px);
 
 }
 
 
-
-/* Feature Icon */
-
-.feature-icon {
-
-  width:65px;
-
-  height:65px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:#dcfce7;
-
-  border-radius:20px;
-
-  font-size:32px;
-
-  margin-bottom:25px;
-
-}
-
-
-
-/* Title */
 
 .feature-card h3 {
 
-  font-size:24px;
-
   color:#166534;
 
-  margin-bottom:12px;
+  font-size:22px;
 
 }
 
 
-
-/* Description */
 
 .feature-card p {
 
-  color:#64748b;
+  color:#666;
 
-  line-height:1.7;
-
-  font-size:16px;
+  line-height:1.6;
 
 }
-
 
 
 
@@ -1804,8 +1688,8 @@ html {
 
 
 .landing-hero h1 {
- font-size:clamp(32px,8vw,42px)
-  
+
+  font-size:36px;
 
 }
 
