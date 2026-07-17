@@ -2256,3 +2256,4502 @@ button {
 
 
 }
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDES
+   PART 1
+   NAVBAR + HERO + ANIMATIONS
+===================================================== */
+
+
+/* =========================
+   PREMIUM NAVBAR
+========================= */
+
+.navbar {
+
+    background:
+    rgba(255,255,255,0.78);
+
+    backdrop-filter:
+    blur(20px);
+
+    border:
+    1px solid rgba(34,197,94,0.18);
+
+    border-radius:28px;
+
+    padding:18px 35px;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,0.10);
+
+    transition:0.35s ease;
+
+}
+
+
+.navbar-scrolled {
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 25px 60px rgba(21,128,61,0.18);
+
+}
+
+
+
+/* =========================
+   LOGO UPGRADE
+========================= */
+
+
+.logo {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.logo-icon {
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+    );
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 25px rgba(21,128,61,0.25);
+
+}
+
+
+.logo-text h2 {
+
+    font-size:24px;
+
+    font-weight:900;
+
+    color:#15803d;
+
+}
+
+
+.logo-text span {
+
+    font-size:12px;
+
+    color:#64748b;
+
+}
+
+
+
+/* =========================
+   NAV BUTTONS
+========================= */
+
+
+.nav-links button {
+
+    background:none;
+
+    width:auto;
+
+    margin:0;
+
+    padding:8px 5px;
+
+    color:#374151;
+
+    font-weight:600;
+
+}
+
+
+.nav-links button.active {
+
+    color:#15803d;
+
+}
+
+
+.nav-btn {
+
+    width:auto;
+
+    margin:0;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+    );
+
+    box-shadow:
+    0 10px 25px rgba(21,128,61,0.30);
+
+}
+
+
+
+/* =====================================================
+   HERO PREMIUM
+===================================================== */
+
+
+.landing-hero {
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:720px;
+
+    padding:70px 50px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:white;
+
+}
+
+
+
+/* Background Glow */
+
+
+.hero-background {
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+
+.blur-circle {
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:0.35;
+
+}
+
+
+
+.circle1 {
+
+    width:300px;
+
+    height:300px;
+
+    background:#22c55e;
+
+    top:-120px;
+
+    left:-100px;
+
+}
+
+
+
+.circle2 {
+
+    width:280px;
+
+    height:280px;
+
+    background:#06b6d4;
+
+    right:-100px;
+
+    top:120px;
+
+}
+
+
+
+.circle3 {
+
+    width:220px;
+
+    height:220px;
+
+    background:#84cc16;
+
+    bottom:-100px;
+
+    left:40%;
+
+}
+
+
+
+/* Hero Layout */
+
+
+.hero-content {
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero-left {
+
+    text-align:left;
+
+}
+
+
+
+.hero-badge {
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-weight:700;
+
+}
+
+
+
+/* Main Heading */
+
+
+.hero-left h1 {
+
+    font-size:
+    clamp(42px,5vw,70px);
+
+    line-height:1.08;
+
+    font-weight:900;
+
+    margin-top:25px;
+
+    letter-spacing:-2px;
+
+}
+
+
+
+.hero-left h1 span {
+
+    color:#22c55e;
+
+}
+
+
+
+.hero-left p {
+
+    margin-top:25px;
+
+    max-width:620px;
+
+    font-size:18px;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+}
+
+
+
+/* Hero Buttons */
+
+
+.hero-buttons {
+
+    justify-content:flex-start;
+
+    margin-top:35px;
+
+}
+
+
+
+.hero-primary-btn {
+
+    width:auto;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+}
+
+
+
+.hero-secondary-btn {
+
+    width:auto;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#15803d;
+
+    border:2px solid #15803d;
+
+}
+
+
+
+/* =====================================================
+   HERO RIGHT EARTH
+===================================================== */
+
+
+.hero-right {
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.planet-card {
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:120px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #0ea5e9
+    );
+
+    box-shadow:
+
+    0 30px 70px rgba(21,128,61,0.35);
+
+    animation:
+    ecoFloat 5s ease-in-out infinite;
+
+}
+
+
+
+@keyframes ecoFloat {
+
+
+    0%,100% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-20px);
+
+    }
+
+}
+
+
+
+/* =========================
+   LOAD ANIMATION
+========================= */
+
+
+.hero-loaded .hero-left {
+
+    animation:
+    heroFade 0.8s ease;
+
+}
+
+
+@keyframes heroFade {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================
+   MOBILE HERO
+========================= */
+
+
+@media(max-width:900px){
+
+
+    .hero-content {
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .hero-left {
+
+        text-align:center;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content:center;
+
+    }
+
+
+    .hero-right {
+
+        margin-top:40px;
+
+    }
+
+
+    .planet-card {
+
+        width:240px;
+
+        height:240px;
+
+        font-size:90px;
+
+    }
+
+
+}
+/* =====================================================
+   ECOLENS HERO FINAL FIX
+   RESTORE CENTER HERO LAYOUT
+===================================================== */
+
+
+.landing-hero {
+
+    display:block !important;
+
+    text-align:center !important;
+
+    min-height:auto !important;
+
+    padding:90px 30px !important;
+
+}
+
+
+/* Disable two column layout */
+
+.hero-content {
+
+    display:block !important;
+
+}
+
+
+.hero-left {
+
+    text-align:center !important;
+
+    width:100%;
+
+}
+
+
+.hero-right {
+
+    display:none !important;
+
+}
+
+
+/* Heading */
+
+.hero-left h1 {
+
+    font-size:clamp(42px,7vw,72px);
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+/* Paragraph */
+
+.hero-left p {
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+/* Buttons center */
+
+.hero-buttons {
+
+    justify-content:center !important;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.landing-hero {
+
+    padding:45px 20px !important;
+
+}
+
+
+.hero-left h1 {
+
+    font-size:42px;
+
+}
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDES
+   PART 3
+   CARBON DASHBOARD + RESULT UI
+===================================================== */
+
+
+/* =========================
+   RESULT SECTION UPGRADE
+========================= */
+
+
+.result-section {
+
+    margin-top:80px;
+
+    animation:
+    dashboardFade 0.8s ease;
+
+}
+
+
+@keyframes dashboardFade {
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+.result-section > h2 {
+
+    font-size:42px !important;
+
+    font-weight:900;
+
+    background:
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+/* =========================
+   CARBON CARDS PREMIUM
+========================= */
+
+
+.cards {
+
+    gap:30px !important;
+
+}
+
+
+
+.carbon-card {
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-radius:30px;
+
+
+    padding:40px 25px;
+
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,0.08);
+
+
+    transition:
+
+    0.4s ease;
+
+}
+
+
+
+.carbon-card::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    background:#22c55e;
+
+    opacity:0.12;
+
+    border-radius:50%;
+
+    right:-40px;
+
+    top:-40px;
+
+
+}
+
+
+
+.carbon-card:hover {
+
+
+    transform:
+
+    translateY(-12px)
+    scale(1.02);
+
+
+    box-shadow:
+
+    0 30px 60px rgba(21,128,61,0.18);
+
+
+}
+
+
+
+
+.carbon-value {
+
+
+    font-size:42px !important;
+
+    font-weight:900;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+/* =========================
+   TOTAL CARBON CARD
+========================= */
+
+
+.total-carbon-card {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #ecfdf5
+    );
+
+
+    border-left:none !important;
+
+
+}
+
+
+
+.total-carbon-card::after {
+
+
+    content:"🌱";
+
+
+    position:absolute;
+
+
+    right:35px;
+
+
+    top:25px;
+
+
+    font-size:60px;
+
+
+    opacity:0.15;
+
+
+}
+
+
+
+.total-carbon-value {
+
+
+    font-size:70px !important;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #15803d,
+    #16a34a
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+/* =========================
+   CHART CARD
+========================= */
+
+
+.chart {
+
+
+    border-radius:35px;
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f8fafc
+    );
+
+
+}
+
+
+
+.chart h2 {
+
+
+    font-size:32px;
+
+
+    font-weight:800;
+
+}
+
+
+
+
+.pie-container {
+
+
+    padding:20px;
+
+
+}
+
+
+
+/* =========================
+   AI ANALYSIS SECTION
+========================= */
+
+
+.ai-analysis-card {
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+}
+
+
+
+.ai-analysis-card h2 {
+
+
+    font-size:38px !important;
+
+
+}
+
+
+
+/* =========================
+   ECO SCORE PREMIUM
+========================= */
+
+
+.eco-score-box {
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #dcfce7,
+    #ecfeff
+    );
+
+
+    border-radius:35px;
+
+
+}
+
+
+
+.eco-score-number {
+
+
+    font-size:75px !important;
+
+
+    text-shadow:
+
+    0 10px 30px rgba(21,128,61,0.25);
+
+
+}
+
+
+
+
+.score-progress {
+
+
+    height:20px;
+
+
+    background:#d1fae5;
+
+
+}
+
+
+
+.score-progress-fill {
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+
+}
+
+
+
+
+/* =========================
+   AI MESSAGE BOX
+========================= */
+
+
+.ai-message {
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ecfdf5,
+    #ffffff
+    );
+
+
+    border-left:
+
+    8px solid #22c55e;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,0.06);
+
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.result-section > h2 {
+
+    font-size:30px !important;
+
+}
+
+
+.total-carbon-value {
+
+    font-size:48px !important;
+
+}
+
+
+.eco-score-number {
+
+    font-size:50px !important;
+
+}
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDES
+   PART 4
+   AI INSIGHTS + RECOMMENDATIONS + SIMULATOR
+===================================================== */
+
+
+/* =========================
+   AI INSIGHT SECTION
+========================= */
+
+
+.ai-analysis-card {
+
+    margin-top:80px !important;
+
+}
+
+
+
+.analysis-details {
+
+    gap:30px !important;
+
+}
+
+
+
+.analysis-details p {
+
+
+    position:relative;
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f8fafc
+    );
+
+
+    border-left:
+
+    6px solid #22c55e;
+
+
+    border-radius:25px;
+
+
+    padding:35px;
+
+
+    transition:0.35s ease;
+
+
+}
+
+
+
+.analysis-details p:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(21,128,61,0.15);
+
+
+}
+
+
+
+
+
+/* =========================
+   AI MESSAGE PREMIUM
+========================= */
+
+
+.ai-message {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    padding:35px !important;
+
+
+}
+
+
+
+.ai-message::before {
+
+
+    content:"🤖";
+
+
+    position:absolute;
+
+
+    right:25px;
+
+
+    top:20px;
+
+
+    font-size:60px;
+
+
+    opacity:0.15;
+
+
+}
+
+
+
+.ai-message h3 {
+
+
+    font-size:26px;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+/* =========================
+   AI CONFIDENCE CARD
+========================= */
+
+
+.ai-confidence {
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #ecfdf5
+    ) !important;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.ai-confidence p {
+
+
+    font-size:55px !important;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+/* =========================
+   ECO SUMMARY
+========================= */
+
+
+.eco-summary-card {
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    ) !important;
+
+
+    border-radius:35px;
+
+
+}
+
+
+
+.summary-grid {
+
+
+    gap:30px !important;
+
+
+}
+
+
+
+.summary-item {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:white;
+
+
+    border:none !important;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 12px 30px rgba(0,0,0,0.07);
+
+
+    transition:0.35s ease;
+
+
+}
+
+
+
+.summary-item::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:80px;
+
+
+    height:80px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.15;
+
+
+    border-radius:50%;
+
+
+    right:-20px;
+
+
+    bottom:-20px;
+
+
+}
+
+
+
+.summary-item:hover {
+
+
+    transform:
+
+    translateY(-10px);
+
+
+}
+
+
+
+
+.summary-item p {
+
+
+    font-size:34px !important;
+
+
+}
+
+
+
+/* =========================
+   RECOMMENDATION SECTION
+========================= */
+
+
+.recommendation {
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    ) !important;
+
+
+    border-radius:35px;
+
+
+}
+
+
+
+.recommendation h2 {
+
+
+    font-size:36px !important;
+
+
+}
+
+
+
+.recommendation-grid {
+
+
+    gap:30px !important;
+
+
+}
+
+
+
+.recommendation-card {
+
+
+    position:relative;
+
+
+    background:white;
+
+
+    border:none !important;
+
+
+    border-radius:25px;
+
+
+    padding:30px;
+
+
+    box-shadow:
+
+
+    0 12px 30px rgba(0,0,0,0.07);
+
+
+    transition:0.35s ease;
+
+
+}
+
+
+
+.recommendation-card:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(21,128,61,0.15);
+
+
+}
+
+
+
+.recommendation-icon {
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#dcfce7;
+
+
+    border-radius:20px;
+
+
+    font-size:35px;
+
+
+}
+
+
+
+/* =========================
+   CARBON REDUCTION SIMULATOR
+========================= */
+
+
+.simulator-card {
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #ecfdf5
+    ) !important;
+
+
+    border-radius:35px;
+
+
+}
+
+
+
+.simulator-card h2 {
+
+
+    font-size:36px !important;
+
+
+}
+
+
+
+.simulation-grid {
+
+
+    gap:30px !important;
+
+
+}
+
+
+
+.simulation-box {
+
+
+    background:white !important;
+
+
+    border:none !important;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 12px 30px rgba(0,0,0,0.07);
+
+
+    transition:0.35s ease;
+
+
+}
+
+
+
+.simulation-box:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+.simulation-box p {
+
+
+    font-size:34px !important;
+
+
+}
+
+
+
+.simulation-message {
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #15803d,
+    #166534
+    ) !important;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(21,128,61,0.25);
+
+
+}
+
+
+
+/* =========================
+   MOBILE FIX
+========================= */
+
+
+@media(max-width:768px){
+
+
+.ai-message::before {
+
+    display:none;
+
+}
+
+
+.recommendation h2,
+.simulator-card h2 {
+
+    font-size:28px !important;
+
+}
+
+
+.summary-item p,
+.simulation-box p {
+
+    font-size:28px !important;
+
+}
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDES
+   PART 5
+   NAVBAR + BUTTONS + FOOTER + FINAL POLISH
+===================================================== */
+
+
+/* =========================
+   NAVBAR FINAL POLISH
+========================= */
+
+
+.navbar {
+
+    max-width:1250px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    transition:0.35s ease;
+
+}
+
+
+
+.navbar:hover {
+
+
+    box-shadow:
+
+    0 25px 60px rgba(21,128,61,0.15);
+
+
+}
+
+
+
+/* Logo Glow */
+
+
+.logo,
+.logo-text h2 {
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+/* Navigation Links */
+
+
+.nav-links a {
+
+
+    transition:0.3s ease;
+
+
+}
+
+
+
+.nav-links a:hover {
+
+
+    transform:
+
+    translateY(-3px);
+
+
+}
+
+
+
+
+
+/* =========================
+   ALL BUTTON PREMIUM STYLE
+========================= */
+
+
+button {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+button::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+    left:-100%;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+    );
+
+
+    transition:0.5s;
+
+
+}
+
+
+
+button:hover::before {
+
+
+    left:100%;
+
+
+}
+
+
+
+
+
+/* Main CTA */
+
+
+.hero-primary-btn,
+.nav-btn {
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+    ) !important;
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(21,128,61,0.3);
+
+
+}
+
+
+
+
+.hero-primary-btn:hover,
+.nav-btn:hover {
+
+
+    transform:
+
+    translateY(-5px);
+
+
+}
+
+
+
+
+
+/* Secondary Button */
+
+
+.hero-secondary-btn {
+
+
+    transition:0.3s ease;
+
+
+}
+
+
+
+.hero-secondary-btn:hover {
+
+
+    background:#15803d !important;
+
+
+    color:white !important;
+
+
+}
+
+
+
+/* =========================
+   PAGE SECTION SPACING
+========================= */
+
+
+.form-card,
+.result-section,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation,
+.simulator-card {
+
+
+    animation:
+
+    sectionAppear 0.7s ease;
+
+
+}
+
+
+
+@keyframes sectionAppear {
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(25px);
+
+
+}
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+/* =========================
+   FOOTER DESIGN
+========================= */
+
+
+.footer {
+
+
+    margin-top:80px;
+
+
+    padding:40px;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #064e3b,
+    #166534
+    );
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    border-radius:35px 35px 0 0;
+
+
+}
+
+
+
+.footer h3 {
+
+
+    font-size:28px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.footer p {
+
+
+    color:#d1fae5;
+
+
+}
+
+
+
+
+
+.footer a {
+
+
+    color:#86efac;
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+
+
+/* =========================
+   SCROLLBAR PREMIUM
+========================= */
+
+
+::-webkit-scrollbar {
+
+
+    width:10px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+
+    background:#ecfdf5;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+    background:#15803d;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+/* =========================
+   INPUT PREMIUM
+========================= */
+
+
+input,
+select {
+
+
+    transition:0.3s ease;
+
+
+    background:#ffffff;
+
+
+}
+
+
+
+input:hover,
+select:hover {
+
+
+    border-color:#22c55e;
+
+
+}
+
+
+
+input:focus,
+select:focus {
+
+
+    box-shadow:
+
+    0 0 0 4px rgba(34,197,94,0.15);
+
+
+}
+
+
+
+/* =========================
+   MOBILE FINAL POLISH
+========================= */
+
+
+@media(max-width:768px){
+
+
+
+.navbar {
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.logo {
+
+
+    font-size:25px;
+
+
+}
+
+
+
+.nav-links {
+
+
+    gap:20px;
+
+
+}
+
+
+
+.nav-links a {
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.footer {
+
+
+    border-radius:25px 25px 0 0;
+
+
+    padding:30px 20px;
+
+
+}
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDE
+   APPEND-ONLY PART 6
+   CALCULATOR + FORM UI UPGRADE
+===================================================== */
+
+
+/* =========================
+   Calculator Container
+========================= */
+
+.form-card {
+
+    background:
+    rgba(255,255,255,0.85);
+
+    backdrop-filter:
+    blur(18px);
+
+    border:
+    1px solid rgba(34,197,94,0.15);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,0.08);
+
+    transition:0.3s ease;
+
+}
+
+
+.form-card:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 30px 70px rgba(21,128,61,0.15);
+
+}
+
+
+
+/* =========================
+   Form Heading
+========================= */
+
+
+.form-card h2 {
+
+    font-size:32px;
+
+    font-weight:900;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+
+
+
+/* =========================
+   Labels
+========================= */
+
+
+label {
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#166534;
+
+    margin-top:22px;
+
+}
+
+
+
+/* =========================
+   Inputs
+========================= */
+
+
+input,
+select {
+
+
+    background:#f8fafc;
+
+    border:
+
+    2px solid transparent;
+
+
+    transition:
+
+    0.3s ease;
+
+}
+
+
+
+input:hover,
+select:hover {
+
+
+    background:white;
+
+    border-color:#bbf7d0;
+
+}
+
+
+
+input:focus,
+select:focus {
+
+
+    background:white;
+
+    border-color:#22c55e;
+
+    box-shadow:
+
+    0 0 0 4px rgba(34,197,94,0.15);
+
+}
+
+
+
+/* =========================
+   Calculate Button
+========================= */
+
+
+.form-card button {
+
+
+    margin-top:40px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+    );
+
+
+    font-size:18px;
+
+    font-weight:800;
+
+    padding:17px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(21,128,61,0.30);
+
+
+}
+
+
+
+.form-card button:hover {
+
+
+    transform:
+
+    translateY(-4px);
+
+
+    box-shadow:
+
+    0 20px 45px rgba(21,128,61,0.40);
+
+}
+
+
+
+
+
+/* =========================
+   Loading Card Upgrade
+========================= */
+
+
+.ai-loading-card {
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+}
+
+
+
+
+.loader {
+
+
+    width:55px;
+
+    height:55px;
+
+    border-width:6px;
+
+}
+
+
+
+/* =========================
+   Error Message Upgrade
+========================= */
+
+
+.error-card {
+
+
+    border-left:
+
+    6px solid #dc2626;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(220,38,38,0.15);
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDE
+   APPEND-ONLY PART 7
+   CARBON RESULT DASHBOARD UPGRADE
+===================================================== */
+
+
+/* =========================
+   Result Section
+========================= */
+
+
+.result-section {
+
+    margin-top:70px;
+
+    animation:
+    dashboardFade 0.8s ease;
+
+}
+
+
+@keyframes dashboardFade {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* =========================
+   Dashboard Title
+========================= */
+
+
+.result-section > h2 {
+
+
+    font-size:42px;
+
+    font-weight:900;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+/* =========================
+   Carbon Cards Grid
+========================= */
+
+
+.cards {
+
+
+    gap:30px;
+
+}
+
+
+
+
+/* =========================
+   Individual Carbon Card
+========================= */
+
+
+.carbon-card {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-radius:30px;
+
+
+    padding:40px 25px;
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(0,0,0,0.08);
+
+
+    transition:
+
+    0.35s ease;
+
+
+}
+
+
+
+.carbon-card::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:120px;
+
+
+    height:120px;
+
+
+    right:-50px;
+
+
+    top:-50px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.12;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+.carbon-card:hover {
+
+
+    transform:
+
+    translateY(-10px);
+
+
+    box-shadow:
+
+
+    0 25px 60px rgba(21,128,61,0.18);
+
+
+}
+
+
+
+
+
+
+/* =========================
+   Icons
+========================= */
+
+
+.carbon-card .icon {
+
+
+    width:80px;
+
+    height:80px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    margin:auto;
+
+
+    border-radius:25px;
+
+
+    background:#dcfce7;
+
+
+    font-size:40px;
+
+
+}
+
+
+
+
+/* =========================
+   Carbon Value
+========================= */
+
+
+.carbon-value {
+
+
+    font-size:42px;
+
+    font-weight:900;
+
+
+    color:#15803d;
+
+
+}
+
+
+
+
+/* =========================
+   Total Carbon Card
+========================= */
+
+
+.total-carbon-card {
+
+
+    margin-top:80px;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #ecfdf5
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-left:
+
+    8px solid #22c55e;
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+
+    0 20px 55px rgba(0,0,0,0.10);
+
+
+}
+
+
+
+.total-carbon-card::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:250px;
+
+
+    height:250px;
+
+
+    right:-100px;
+
+
+    bottom:-100px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.10;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+.total-carbon-value {
+
+
+    font-size:70px;
+
+
+    font-weight:950;
+
+
+    letter-spacing:-2px;
+
+
+}
+
+
+
+/* =========================
+   Carbon Message
+========================= */
+
+
+.carbon-message {
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.20);
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+/* =========================
+   Chart Card
+========================= */
+
+
+.chart {
+
+
+    margin-top:70px;
+
+
+    background:
+
+
+    rgba(255,255,255,0.85);
+
+
+    backdrop-filter:
+
+    blur(18px);
+
+
+    border-radius:35px;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    box-shadow:
+
+
+    0 20px 50px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+.chart h2 {
+
+
+    font-size:32px;
+
+    font-weight:900;
+
+}
+
+
+
+
+/* =========================
+   Mobile Dashboard
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .result-section > h2 {
+
+        font-size:32px;
+
+    }
+
+
+    .carbon-value {
+
+        font-size:34px;
+
+    }
+
+
+    .total-carbon-value {
+
+        font-size:48px;
+
+    }
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDE
+   APPEND-ONLY PART 8
+   AI CARBON INTELLIGENCE + ECO SCORE UPGRADE
+===================================================== */
+
+
+/* =========================
+   AI Analysis Main Card
+========================= */
+
+
+.ai-analysis-card {
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+
+    0 20px 55px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+.ai-analysis-card::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    top:-100px;
+
+
+    right:-80px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.12;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+/* =========================
+   AI Heading
+========================= */
+
+
+.ai-analysis-card h2 {
+
+
+    font-size:38px;
+
+
+    font-weight:900;
+
+
+    background:
+
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+/* =========================
+   Eco Score Box
+========================= */
+
+
+.eco-score-box {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #dcfce7,
+    #ecfdf5
+    );
+
+
+    border-radius:30px;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.20);
+
+
+}
+
+
+
+
+.eco-score-box::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:160px;
+
+
+    height:160px;
+
+
+    right:-60px;
+
+
+    bottom:-60px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.15;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+/* =========================
+   Score Number
+========================= */
+
+
+.eco-score-number {
+
+
+    font-size:75px;
+
+
+    font-weight:950;
+
+
+    color:#15803d;
+
+
+    letter-spacing:-3px;
+
+
+    animation:
+
+    scorePop 0.8s ease;
+
+
+}
+
+
+
+@keyframes scorePop {
+
+
+    from {
+
+        transform:scale(0.8);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+
+/* =========================
+   Progress Bar Upgrade
+========================= */
+
+
+.score-progress {
+
+
+    height:20px;
+
+
+    background:#d1fae5;
+
+
+    border-radius:50px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.score-progress-fill {
+
+
+    background:
+
+
+    linear-gradient(
+    90deg,
+    #22c55e,
+    #15803d
+    );
+
+
+    box-shadow:
+
+
+    0 0 20px rgba(34,197,94,0.45);
+
+
+}
+
+
+
+
+
+/* =========================
+   Impact Status
+========================= */
+
+
+.impact-status {
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #ecfdf5,
+    #dcfce7
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.20);
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(21,128,61,0.10);
+
+
+    font-size:22px;
+
+
+}
+
+
+
+/* =========================
+   Analysis Details Cards
+========================= */
+
+
+.analysis-details p {
+
+
+    background:white;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.12);
+
+
+    border-left:
+
+
+    6px solid #22c55e;
+
+
+    border-radius:25px;
+
+
+    transition:0.3s ease;
+
+
+}
+
+
+
+.analysis-details p:hover {
+
+
+    transform:
+
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 20px 40px rgba(21,128,61,0.12);
+
+
+}
+
+
+
+
+
+/* =========================
+   AI Message Box
+========================= */
+
+
+.ai-message {
+
+
+    position:relative;
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #ecfdf5,
+    #f0fdf4
+    );
+
+
+    border-left:
+
+
+    7px solid #15803d;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(0,0,0,0.06);
+
+
+}
+
+
+
+
+.ai-message h3 {
+
+
+    font-size:24px;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+/* =========================
+   AI Confidence
+========================= */
+
+
+.ai-confidence {
+
+
+    background:
+
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f8fafc
+    );
+
+
+    border-radius:30px;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(0,0,0,0.07);
+
+
+}
+
+
+
+.ai-confidence p {
+
+
+    font-size:55px;
+
+
+    color:#15803d;
+
+
+    font-weight:950;
+
+
+}
+
+
+
+
+
+/* =========================
+   Mobile AI Section
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .ai-analysis-card h2 {
+
+        font-size:28px;
+
+    }
+
+
+    .eco-score-number {
+
+        font-size:50px;
+
+    }
+
+
+    .ai-confidence p {
+
+        font-size:42px;
+
+    }
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDE
+   APPEND-ONLY PART 9
+   ECO SUMMARY + AI RECOMMENDATIONS UPGRADE
+===================================================== */
+
+
+/* =========================
+   Eco Summary Main Card
+========================= */
+
+
+.eco-summary-card {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+
+    0 20px 55px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+.eco-summary-card::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    top:-100px;
+
+
+    left:-80px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.10;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+/* =========================
+   Summary Heading
+========================= */
+
+
+.eco-summary-card h2 {
+
+
+    font-size:36px;
+
+
+    font-weight:900;
+
+
+    background:
+
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+
+/* =========================
+   Summary Grid
+========================= */
+
+
+.summary-grid {
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+/* =========================
+   Summary Item Cards
+========================= */
+
+
+.summary-item {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:white;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.12);
+
+
+    border-left:
+
+
+    6px solid #22c55e;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,0.06);
+
+
+    transition:
+
+
+    0.35s ease;
+
+
+}
+
+
+
+
+
+.summary-item:hover {
+
+
+    transform:
+
+
+    translateY(-10px);
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(21,128,61,0.15);
+
+
+}
+
+
+
+
+
+.summary-item h3 {
+
+
+    color:#374151;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+.summary-item p {
+
+
+    font-size:34px;
+
+
+    font-weight:900;
+
+
+    color:#15803d;
+
+
+}
+
+
+
+
+
+/* =========================
+   Summary Message
+========================= */
+
+
+.summary-message {
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #dcfce7,
+    #ecfdf5
+    );
+
+
+    border-radius:25px;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.20);
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   AI RECOMMENDATIONS
+===================================================== */
+
+
+
+.recommendation {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f8fafc
+    );
+
+
+    border-radius:35px;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    box-shadow:
+
+
+    0 20px 55px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+.recommendation::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:200px;
+
+
+    height:200px;
+
+
+    right:-80px;
+
+
+    top:-80px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.10;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+/* Recommendation Title */
+
+
+.recommendation h2 {
+
+
+    font-size:36px;
+
+
+    font-weight:900;
+
+
+    background:
+
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   Recommendation Grid
+========================= */
+
+
+.recommendation-grid {
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/* =========================
+   Recommendation Cards
+========================= */
+
+
+.recommendation-card {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:white;
+
+
+    border-radius:25px;
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.12);
+
+
+    border-left:
+
+
+    6px solid #22c55e;
+
+
+    padding:30px;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,0.06);
+
+
+    transition:
+
+
+    0.35s ease;
+
+
+}
+
+
+
+
+
+.recommendation-card:hover {
+
+
+    transform:
+
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(21,128,61,0.15);
+
+
+}
+
+
+
+
+/* =========================
+   Recommendation Icon
+========================= */
+
+
+.recommendation-icon {
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#dcfce7;
+
+
+    border-radius:20px;
+
+
+    font-size:32px;
+
+
+    flex-shrink:0;
+
+
+}
+
+
+
+
+
+.recommendation-card p {
+
+
+    font-size:16px;
+
+
+    line-height:1.8;
+
+
+    color:#374151;
+
+
+}
+
+
+
+/* =========================
+   Mobile Optimization
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .eco-summary-card h2,
+
+    .recommendation h2 {
+
+
+        font-size:28px;
+
+
+    }
+
+
+
+    .summary-item p {
+
+
+        font-size:28px;
+
+
+    }
+
+
+
+    .recommendation-card {
+
+
+        flex-direction:column;
+
+
+        text-align:center;
+
+
+    }
+
+
+}
+/* =====================================================
+   ECOLENS AI PREMIUM OVERRIDE
+   APPEND-ONLY PART 10
+   CARBON REDUCTION SIMULATOR + FINAL POLISH
+===================================================== */
+
+
+/* =========================
+   Carbon Reduction Simulator
+========================= */
+
+
+.simulator-card {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f0fdf4
+    );
+
+
+    border:
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+
+    0 20px 55px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+.simulator-card::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:250px;
+
+
+    height:250px;
+
+
+    right:-100px;
+
+
+    top:-100px;
+
+
+    background:#22c55e;
+
+
+    opacity:0.10;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+/* Simulator Heading */
+
+
+.simulator-card h2 {
+
+
+    font-size:36px;
+
+
+    font-weight:900;
+
+
+    background:
+
+
+    linear-gradient(
+    90deg,
+    #15803d,
+    #22c55e
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+/* =========================
+   Simulation Grid
+========================= */
+
+
+.simulation-grid {
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/* =========================
+   Simulation Boxes
+========================= */
+
+
+.simulation-box {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #ecfdf5,
+    #ffffff
+    );
+
+
+    border:
+
+
+    1px solid rgba(34,197,94,0.15);
+
+
+    border-left:
+
+
+    6px solid #22c55e;
+
+
+    border-radius:25px;
+
+
+    padding:35px;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,0.06);
+
+
+    transition:
+
+
+    0.35s ease;
+
+
+}
+
+
+
+
+
+.simulation-box:hover {
+
+
+    transform:
+
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(21,128,61,0.15);
+
+
+}
+
+
+
+
+
+.simulation-box h3 {
+
+
+    font-size:20px;
+
+
+    color:#166534;
+
+
+}
+
+
+
+
+
+.simulation-box p {
+
+
+    font-size:32px;
+
+
+    font-weight:900;
+
+
+    color:#15803d;
+
+
+}
+
+
+
+
+
+/* =========================
+   Simulation Message
+========================= */
+
+
+.simulation-message {
+
+
+    margin-top:40px;
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #166534,
+    #15803d
+    );
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(21,128,61,0.25);
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   FINAL APP POLISH
+===================================================== */
+
+
+/* Smooth Section Spacing */
+
+
+.result-section,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation,
+.simulator-card {
+
+
+    scroll-margin-top:100px;
+
+
+}
+
+
+
+/* Better Selection */
+
+
+::selection {
+
+
+    background:#22c55e;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+/* Premium Scrollbar */
+
+
+::-webkit-scrollbar {
+
+
+    width:10px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+
+    background:#f0fdf4;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+    background:#22c55e;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+/* =========================
+   Global Card Animation
+========================= */
+
+
+.carbon-card,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation,
+.simulator-card {
+
+
+    animation:
+
+    sectionReveal 0.7s ease;
+
+
+}
+
+
+
+@keyframes sectionReveal {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:translateY(25px);
+
+
+    }
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+
+/* =========================
+   Final Mobile Polish
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .simulator-card h2 {
+
+
+        font-size:28px;
+
+
+    }
+
+
+
+    .simulation-box p {
+
+
+        font-size:26px;
+
+
+    }
+
+
+
+}
+

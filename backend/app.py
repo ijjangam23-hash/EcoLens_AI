@@ -5,10 +5,83 @@ from carbon_engine import calculate_total_carbon
 from recommendation_engine import generate_recommendations
 from analysis_engine import generate_analysis
 from simulator import calculate_savings
+# =========================
+# AI Carbon Advisor Engine
+# =========================
+
+def generate_ai_advice(carbon_data):
+
+    total = carbon_data["total"]
+
+    advice = []
+    category = ""
+
+
+    if total < 100:
+
+        category = "Excellent"
+
+        advice.append(
+            "Your carbon footprint is very low. Continue maintaining sustainable habits."
+        )
+
+        advice.append(
+            "Consider inspiring others to follow eco-friendly practices."
+        )
+
+
+    elif total < 250:
+
+        category = "Good"
+
+        advice.append(
+            "Your footprint is moderate. Small lifestyle changes can reduce emissions further."
+        )
+
+        advice.append(
+            "Try reducing unnecessary vehicle usage and electricity consumption."
+        )
+
+
+    elif total < 500:
+
+        category = "Needs Improvement"
+
+        advice.append(
+            "Your carbon footprint is above the recommended level."
+        )
+
+        advice.append(
+            "Focus on transportation, energy usage, and waste reduction."
+        )
+
+
+    else:
+
+        category = "High Impact"
+
+        advice.append(
+            "Your carbon footprint is high."
+        )
+
+        advice.append(
+            "Major improvements are possible by changing travel and energy habits."
+        )
+
+
+    return {
+
+        "eco_category": category,
+
+        "recommendations": advice,
+
+        "estimated_reduction":
+        "10-20% possible reduction with recommended actions"
+
+    }
 app = Flask(__name__)
 
 CORS(app)
-
 
 
 @app.route("/")
@@ -17,6 +90,19 @@ def home():
     return "EcoLens AI Backend Running"
 
 
+
+# =========================
+# AI Advisor API
+# =========================
+
+@app.route("/ai-advisor", methods=["POST"])
+def ai_advisor():
+
+    data = request.json
+
+    result = generate_ai_advice(data)
+
+    return jsonify(result)
 
 @app.route("/calculate", methods=["POST"])
 def calculate():
