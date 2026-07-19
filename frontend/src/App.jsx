@@ -18,6 +18,8 @@ import{
   FaGithub,
   FaLinkedin,
   FaGlobe,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
 const [heroLoaded, setHeroLoaded] = useState(false);
 const [navbarScrolled, setNavbarScrolled] = useState(false);
 
-
+const [menuOpen, setMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
 
     vehicle: "bike",
@@ -164,25 +166,23 @@ useEffect(() => {
 
     {/* Navigation */}
 
-    <ul className="nav-links">
+{/* Desktop Navigation */}
 
-      <li>
-        <a href="#">Home</a>
-      </li>
+<ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+  <li><a href="#">Home</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#calculator">Calculator</a></li>
+  <li><a href="#dashboard">Dashboard</a></li>
+</ul>
 
-      <li>
-        <a href="#features">Features</a>
-      </li>
+{/* Mobile Menu Button */}
 
-      <li>
-        <a href="#calculator">Calculator</a>
-      </li>
-
-      <li>
-        <a href="#dashboard">Dashboard</a>
-      </li>
-
-    </ul>
+<div
+  className="menu-toggle"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? <FaTimes /> : <FaBars />}
+</div>
 
   </div>
 
