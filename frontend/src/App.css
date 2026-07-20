@@ -9,7 +9,27 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
+:root{
 
+    --primary-green:#16a34a;
+    --dark-green:#15803d;
+    --accent-green:#22c55e;
+
+    --light-green:#dcfce7;
+
+    --background:#f8fafc;
+
+    --text-primary:#111827;
+    --text-secondary:#64748b;
+
+    --card-background:#ffffff;
+
+    --border-color:rgba(34,197,94,.10);
+
+    --shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+}
 /* Reset */
 
 *{
@@ -17,7 +37,59 @@
     padding:0;
     box-sizing:border-box;
 }
+h1{
+    font-weight:900;
+    letter-spacing:-1.5px;
+}
 
+
+h2{
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+
+h3{
+    font-weight:700;
+}
+
+
+p{
+    line-height:1.7;
+}
+
+/* =================================
+   ECOLENS DESIGN SYSTEM
+================================= */
+
+:root{
+
+    --primary-green:#16a34a;
+
+    --dark-green:#15803d;
+
+    --accent-green:#22c55e;
+
+    --light-green:#dcfce7;
+
+
+    --background:#f8fafc;
+
+    --card-background:#ffffff;
+
+
+    --text-primary:#111827;
+
+    --text-secondary:#64748b;
+
+
+    --border-color:rgba(34,197,94,.10);
+
+
+    --shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+}
 html{
     scroll-behavior:smooth;
 }
@@ -1283,7 +1355,7 @@ width:flex;
 
 .carbon-value{
 
-    font-size:38px;
+    font-size:42px;
 
     font-weight:800;
 
@@ -1776,43 +1848,55 @@ width:flex;
    MOBILE AI CONFIDENCE FIX
 ========================================== */
 
-@media (max-width:768px){
+@media(max-width:768px){
+
+    .ai-confidence{
+
+        padding:25px 18px;
+
+    }
+
 
     .confidence-top{
 
         display:flex;
 
-        justify-content:space-between;
+        flex-direction:column;
+
+        justify-content:center;
 
         align-items:center;
 
-        gap:12px;
+        gap:10px;
 
-        flex-wrap:wrap;
+        text-align:center;
 
     }
+
 
     .confidence-top h3{
 
         font-size:18px;
-font-weight:700;
-        
+
+        width:100%;
 
     }
+
 
     .confidence-top strong{
 
-        font-size:22px;
-
-        flex-shrink:0;
+        font-size:24px;
 
     }
 
+
     .ai-confidence p{
 
-        font-size:14px;
+        font-size:10px;
 
         line-height:1.6;
+
+        
 
     }
 
@@ -2233,7 +2317,7 @@ font-weight:700;
 
 .ai-confidence p{
 
-    font-size:50px;
+    font-size:40px;
 
     font-weight:800;
 
@@ -2809,7 +2893,7 @@ font-weight:700;
 
 .total-carbon-card{
 
-    max-width:900px;
+    max-width:1000px;
 
     margin:55px auto;
 
@@ -2849,7 +2933,7 @@ font-weight:700;
 
 .total-header h2{
 
-    font-size:38px;
+    font-size:42px;
 
     color:#111827;
 
@@ -2859,8 +2943,8 @@ font-weight:700;
 
 .total-carbon-value{
 
-    font-size:70px;
-
+    font-size:85px;
+letter-spacing:-2px;
     font-weight:900;
 
     color:#16a34a;
@@ -3546,13 +3630,18 @@ font-weight:700;
 
 }
 
+.pdf-content{
+
+    min-width:0;
+
+}
+
+
 .pdf-content p{
 
-    color:#64748b;
+    overflow-wrap:break-word;
 
-    line-height:1.8;
-
-    max-width:650px;
+    word-break:break-word;
 
 }
 
@@ -3594,27 +3683,44 @@ font-weight:700;
 
 }
 
-@media(max-width:768px){
+    @media(max-width:768px){
 
     .pdf-section{
 
-        padding:35px 25px;
+        width:90%;
+
+        padding:30px 20px;
 
         text-align:center;
 
         flex-direction:column;
 
+        overflow:hidden;
+
     }
+
+
+    .pdf-content{
+
+        width:100%;
+
+    }
+
 
     .pdf-content h2{
 
-        font-size:30px;
+        font-size:28px;
+
+        line-height:1.3;
 
     }
 
-    .pdf-download-btn{
 
-        width:100%;
+    .pdf-content p{
+
+        font-size:15px;
+
+        line-height:1.7;
 
     }
 
@@ -4213,7 +4319,7 @@ padding-top: 220px;
     max-width:850px;
 
     margin:50px auto;
-
+margin-bottom: 70px;
 }
 
 .dashboard-badge{
@@ -4249,7 +4355,7 @@ padding-top: 220px;
     margin-bottom:20px;
 
     line-height:1.2;
-
+letter-spacing:-1.5px;
 }
 
 .dashboard-header p{
@@ -4260,7 +4366,7 @@ padding-top: 220px;
 
     line-height:1.8;
 
-    max-width:700px;
+    max-width:750px;
 
     margin:auto;
 
@@ -4724,5 +4830,2167 @@ button:disabled{
     border-color:rgba(34,197,94,.25);
 
     box-shadow:0 25px 60px rgba(34,197,94,.12);
+
+}
+
+/* =====================================================
+   DASHBOARD CARD STANDARDIZATION (CSS ONLY)
+===================================================== */
+
+
+/* Common Dashboard Sections */
+
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation-section,
+.simulator-card,
+.pdf-section,
+.chart-card,
+.total-carbon-card{
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    border:1px solid rgba(34,197,94,.10);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+
+/* Hover Effect */
+
+.ai-analysis-card:hover,
+.eco-summary-card:hover,
+.recommendation-section:hover,
+.simulator-card:hover,
+.pdf-section:hover,
+.chart-card:hover,
+.total-carbon-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 30px 70px rgba(22,163,74,.15);
+
+}
+
+
+
+/* Inner Dashboard Cards */
+
+.carbon-card,
+.summary-item,
+.recommendation-card,
+.simulation-box,
+.analysis-item{
+
+    background:#f8fafc;
+
+    border-radius:24px;
+
+    border:1px solid #e5e7eb;
+
+    padding:30px;
+
+    transition:.35s ease;
+
+}
+
+
+/* Inner Card Hover */
+
+.carbon-card:hover,
+.summary-item:hover,
+.recommendation-card:hover,
+.simulation-box:hover,
+.analysis-item:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+    0 18px 40px rgba(34,197,94,.12);
+
+}
+
+
+
+/* Consistent Headings */
+
+.ai-analysis-card h2,
+.eco-summary-card h2,
+.recommendation-section h2,
+.simulator-card h2,
+.chart-card h2{
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+}
+
+
+
+/* Consistent Description Text */
+
+.ai-analysis-card p,
+.eco-summary-card p,
+.recommendation-section p,
+.simulator-card p,
+.chart-card p{
+
+    line-height:1.8;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .ai-analysis-card,
+    .eco-summary-card,
+    .recommendation-section,
+    .simulator-card,
+    .pdf-section,
+    .chart-card,
+    .total-carbon-card{
+
+        border-radius:22px;
+
+        padding:25px;
+
+    }
+
+
+    .carbon-card,
+    .summary-item,
+    .recommendation-card,
+    .simulation-box,
+    .analysis-item{
+
+        padding:22px;
+
+    }
+
+}
+/* =====================================================
+   DASHBOARD PREMIUM BACKGROUND
+===================================================== */
+
+.result-section{
+
+    padding:80px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f8fafc,
+        #ffffff
+    );
+
+}
+/* =====================================================
+   DASHBOARD ENTRY ANIMATION
+===================================================== */
+
+.total-carbon-card,
+.chart-card,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation-section,
+.simulator-card,
+.pdf-section{
+
+    animation:dashboardFade .8s ease forwards;
+
+}
+
+
+@keyframes dashboardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =====================================================
+   AI INTELLIGENCE SECTION REDESIGN
+===================================================== */
+
+
+/* Main AI Container */
+
+.ai-analysis-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0fdf4
+    );
+
+    border:1px solid rgba(34,197,94,.15);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+
+/* AI Glow Effect */
+
+.ai-analysis-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:#22c55e;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    top:-100px;
+
+    right:-100px;
+
+}
+
+
+
+/* Header */
+
+.ai-header{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+.ai-badge{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+.ai-header h2{
+
+    font-size:44px;
+
+    font-weight:900;
+
+    margin-top:20px;
+
+    letter-spacing:-1.5px;
+
+}
+
+
+/* Eco Score Area */
+
+.eco-score-box{
+
+    margin:50px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+/* Score Card */
+
+.eco-score-card{
+
+    width:100%;
+
+    max-width:550px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    background:white;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+}
+
+
+/* Score Number */
+
+.eco-score-card h1{
+
+    font-size:90px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:#16a34a;
+
+}
+
+
+
+/* Progress */
+
+.eco-progress{
+
+    height:16px;
+
+    margin:30px 0;
+
+    background:#e5e7eb;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+
+.eco-progress-fill{
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #22c55e,
+        #15803d
+    );
+
+}
+
+
+
+/* Status */
+
+.eco-status{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    border-radius:50px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-weight:800;
+
+    margin-top:15px;
+
+}
+
+
+/* AI Message */
+
+.ai-message{
+
+    margin-top:45px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:white;
+
+    border-left:
+
+    6px solid #22c55e;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.06);
+
+}
+
+
+.ai-message h3{
+
+    font-size:26px;
+
+    color:#166534;
+
+}
+
+
+
+/* Confidence */
+
+.ai-confidence{
+
+    margin-top:35px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+}
+
+
+.ai-confidence h3{
+
+    font-size:22px;
+
+}
+
+
+.ai-confidence p{
+
+    font-size:40px;
+
+    font-weight:900;
+
+    color:#16a34a;
+
+}
+
+
+
+/* Hover */
+
+.eco-score-card:hover,
+.ai-message:hover,
+.ai-confidence:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 25px 60px rgba(34,197,94,.15);
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .ai-analysis-card{
+
+        padding:30px 20px;
+
+    }
+
+
+    .ai-header h2{
+
+        font-size:32px;
+
+    }
+
+
+    .eco-score-card h1{
+
+        font-size:65px;
+
+    }
+
+
+    .ai-confidence p{
+
+        font-size:30px;
+
+    }
+
+}
+/* =====================================================
+   ECO SUMMARY SECTION REDESIGN
+===================================================== */
+
+
+/* Main Container */
+
+.eco-summary-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0fdf4
+    );
+
+    border:1px solid rgba(34,197,94,.15);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+
+/* Background Glow */
+
+.eco-summary-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:#22c55e;
+
+    filter:blur(120px);
+
+    opacity:.15;
+
+    bottom:-100px;
+
+    left:-80px;
+
+}
+
+
+
+/* Header */
+
+.summary-header{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+.summary-badge{
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
+
+
+.summary-header h2{
+
+    margin-top:20px;
+
+    font-size:44px;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    color:#111827;
+
+}
+
+
+.summary-header p{
+
+    max-width:720px;
+
+    margin:15px auto 0;
+
+    color:#64748b;
+
+    font-size:17px;
+
+}
+
+
+
+/* Summary Grid */
+
+.summary-grid{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/* Summary Cards */
+
+.summary-item{
+
+    position:relative;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    transition:.35s ease;
+
+}
+
+
+
+/* Hover */
+
+.summary-item:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+
+    0 25px 60px rgba(34,197,94,.15);
+
+}
+
+
+
+/* Icon */
+
+.summary-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+    background:#dcfce7;
+
+}
+
+
+
+/* Label */
+
+.summary-item h4{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+}
+
+
+
+/* Main Value */
+
+.summary-item h3{
+
+    font-size:32px;
+
+    font-weight:900;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* Description */
+
+.summary-item span{
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+
+
+/* Different Metric Colors */
+
+.summary-item:nth-child(1) .summary-icon{
+
+    background:#dcfce7;
+
+}
+
+
+.summary-item:nth-child(2) .summary-icon{
+
+    background:#dbeafe;
+
+}
+
+
+.summary-item:nth-child(3) .summary-icon{
+
+    background:#fef3c7;
+
+}
+
+
+.summary-item:nth-child(4) .summary-icon{
+
+    background:#ede9fe;
+
+}
+
+
+
+/* Summary Message */
+
+.summary-message{
+
+    position:relative;
+
+    margin-top:45px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ecfdf5,
+        #f0fdf4
+    );
+
+    border-left:
+
+    6px solid #22c55e;
+
+}
+
+
+.summary-message h3{
+
+    font-size:26px;
+
+    color:#166534;
+
+    margin-bottom:15px;
+
+}
+
+
+.summary-message p{
+
+    color:#374151;
+
+    line-height:1.8;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .eco-summary-card{
+
+        padding:30px 20px;
+
+    }
+
+
+    .summary-header h2{
+
+        font-size:32px;
+
+    }
+
+
+    .summary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .summary-item{
+
+        text-align:center;
+
+    }
+
+
+    .summary-icon{
+
+        margin:0 auto 20px;
+
+    }
+
+}
+
+/* =====================================================
+   CARBON REDUCTION SIMULATOR REDESIGN
+===================================================== */
+
+
+/* Main Container */
+
+.simulator-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0fdf4
+    );
+
+    border:1px solid rgba(34,197,94,.15);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+
+/* Background Glow */
+
+.simulator-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:#22c55e;
+
+    filter:blur(120px);
+
+    opacity:.15;
+
+    bottom:-120px;
+
+    right:-80px;
+
+}
+
+
+
+/* Header */
+
+.simulator-header{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.simulator-badge{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
+
+
+
+.simulator-header h2{
+
+    margin-top:20px;
+
+    font-size:44px;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    color:#111827;
+
+}
+
+
+
+.simulator-header p{
+
+    max-width:750px;
+
+    margin:15px auto 0;
+
+    color:#64748b;
+
+    font-size:17px;
+
+}
+
+
+
+/* Simulation Grid */
+
+.simulation-grid{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/* Simulation Cards */
+
+.simulation-box{
+
+    position:relative;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    transition:.35s ease;
+
+}
+
+
+
+/* Hover */
+
+.simulation-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#22c55e;
+
+    box-shadow:
+
+    0 25px 60px rgba(34,197,94,.15);
+
+}
+
+
+
+/* Icon */
+
+.simulation-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:36px;
+
+    background:#dcfce7;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* Title */
+
+.simulation-box h3{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* Savings Number */
+
+.simulation-box p{
+
+    font-size:38px;
+
+    font-weight:900;
+
+    color:#16a34a;
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* Description */
+
+.simulation-box span{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* Different Scenario Colors */
+
+.simulation-box:nth-child(1)
+.simulation-icon{
+
+    background:#dbeafe;
+
+}
+
+
+.simulation-box:nth-child(2)
+.simulation-icon{
+
+    background:#dcfce7;
+
+}
+
+
+.simulation-box:nth-child(3)
+.simulation-icon{
+
+    background:#fef3c7;
+
+}
+
+
+
+/* AI Prediction Message */
+
+.simulation-message{
+
+    position:relative;
+
+    margin-top:45px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ecfdf5,
+        #f0fdf4
+    );
+
+    border-left:6px solid #22c55e;
+
+}
+
+
+
+.simulation-message h3{
+
+    font-size:26px;
+
+    color:#166534;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.simulation-message p{
+
+    color:#374151;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:1100px){
+
+    .simulation-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .simulator-card{
+
+        padding:30px 20px;
+
+    }
+
+
+    .simulator-header h2{
+
+        font-size:32px;
+
+    }
+
+
+    .simulation-box{
+
+        text-align:center;
+
+    }
+
+
+    .simulation-icon{
+
+        margin:0 auto 20px;
+
+    }
+
+}
+/* =====================================================
+   PDF DOWNLOAD SECTION REDESIGN
+===================================================== */
+
+
+/* Main Container */
+
+.pdf-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f0fdf4
+    );
+
+    border:1px solid rgba(34,197,94,.15);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+
+
+/* Background Glow */
+
+.pdf-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:#22c55e;
+
+    filter:blur(120px);
+
+    opacity:.15;
+
+    top:-100px;
+
+    left:-80px;
+
+}
+
+
+
+/* Layout */
+
+.pdf-section{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+
+
+
+/* Content */
+
+.pdf-content{
+
+    position:relative;
+
+    flex:1;
+
+}
+
+
+
+.pdf-badge{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
+
+
+
+.pdf-content h2{
+
+    margin-top:20px;
+
+    font-size:44px;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    color:#111827;
+
+}
+
+
+
+.pdf-content p{
+
+    margin-top:18px;
+
+    max-width:650px;
+
+    color:#64748b;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* Download Button */
+
+.pdf-download-btn{
+
+    position:relative;
+
+    z-index:1;
+
+    padding:20px 45px;
+
+    border-radius:20px;
+
+    border:none;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #22c55e,
+        #15803d
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 20px 45px rgba(34,197,94,.3);
+
+    transition:.35s ease;
+
+}
+
+
+
+/* Button Hover */
+
+.pdf-download-btn:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 30px 70px rgba(34,197,94,.4);
+
+}
+
+
+
+/* Button Active */
+
+.pdf-download-btn:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+/* Document Effect */
+
+.pdf-section::after{
+
+    content:"📄";
+
+    position:absolute;
+
+    right:60px;
+
+    bottom:25px;
+
+    font-size:80px;
+
+    opacity:.08;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .pdf-section{
+
+        padding:35px 25px;
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .pdf-content h2{
+
+        font-size:32px;
+
+    }
+
+
+    .pdf-content p{
+
+        font-size:16px;
+
+    }
+
+
+    .pdf-download-btn{
+
+        width:100%;
+
+    }
+
+
+}
+
+/* =====================================================
+   FINAL UI POLISH
+   ECOLENS AI
+===================================================== */
+
+
+/* ===============================
+   GLOBAL SPACING IMPROVEMENT
+================================ */
+
+
+section{
+
+    scroll-margin-top:90px;
+
+}
+
+
+h1,
+h2,
+h3{
+
+    letter-spacing:-1px;
+
+}
+
+
+p{
+
+    line-height:1.75;
+
+}
+
+
+
+/* ===============================
+   PREMIUM NAVBAR POLISH
+================================ */
+
+
+.navbar{
+
+    height:90px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #052e16,
+        #065f46
+    );
+
+    box-shadow:
+
+    0 10px 40px rgba(0,0,0,.15);
+
+}
+
+
+.navbar-container{
+
+    padding:0 80px;
+
+}
+
+
+
+.logo-text h2{
+
+    font-size:32px;
+
+    letter-spacing:-1.5px;
+
+}
+
+
+.nav-links a{
+
+    font-size:16px;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#86efac;
+
+}
+
+
+
+/* ===============================
+   HERO POLISH
+================================ */
+
+
+.landing-hero{
+
+    padding-top:150px;
+
+}
+
+
+.hero-left h1{
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+}
+
+
+
+.hero-left p{
+
+    font-size:19px;
+
+    max-width:650px;
+
+}
+
+
+
+/* Hero Buttons */
+
+.hero-primary-btn,
+.hero-secondary-btn{
+
+    padding:18px 40px;
+
+    border-radius:999px;
+
+}
+
+
+
+/* ===============================
+   ALL MAJOR CARDS CONSISTENCY
+================================ */
+
+
+.form-card,
+.carbon-card,
+.total-carbon-card,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation-section,
+.simulator-card,
+.pdf-section,
+.chart-card{
+
+    border-radius:32px;
+
+}
+
+
+
+/* ===============================
+   BUTTON SYSTEM
+================================ */
+
+
+button{
+
+    border-radius:18px;
+
+    font-weight:700;
+
+}
+
+
+button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/* ===============================
+   SECTION HEADINGS
+================================ */
+
+
+.dashboard-header h2,
+.ai-header h2,
+.summary-header h2,
+.recommendation-header h2,
+.simulator-header h2,
+.chart-header h2{
+
+    font-weight:900;
+
+}
+
+
+
+/* ===============================
+   CARD MICRO INTERACTION
+================================ */
+
+
+.carbon-card,
+.summary-item,
+.recommendation-card,
+.simulation-box{
+
+    cursor:pointer;
+
+}
+
+
+.carbon-card:hover,
+.summary-item:hover,
+.recommendation-card:hover,
+.simulation-box:hover{
+
+    transform:
+
+    translateY(-10px);
+
+}
+
+
+
+/* ===============================
+   FOOTER POLISH
+================================ */
+
+
+.footer{
+
+    margin-top:100px;
+
+    padding-top:70px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #022c22,
+        #0f172a
+    );
+
+}
+
+
+
+.footer-logo h2{
+
+    font-size:38px;
+
+}
+
+
+.footer-links a:hover{
+
+    color:#22c55e;
+
+}
+
+
+
+/* ===============================
+   MOBILE FINAL FIX
+================================ */
+
+
+@media(max-width:768px){
+
+
+.navbar{
+
+    height:75px;
+
+}
+
+
+.navbar-container{
+
+    padding:0 20px;
+
+}
+
+
+.hero-left h1{
+
+    font-size:40px;
+
+    letter-spacing:-1px;
+
+}
+
+
+.hero-left p{
+
+    font-size:16px;
+
+}
+
+
+.form-card,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation-section,
+.simulator-card,
+.pdf-section{
+
+    border-radius:24px;
+
+}
+
+
+
+}
+/* =====================================================
+   AI LOADING SKELETON
+===================================================== */
+
+.ai-skeleton-container{
+
+    width:100%;
+
+    max-width:500px;
+
+    margin:30px auto;
+
+}
+
+
+.skeleton-line{
+
+    height:18px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #e5e7eb 25%,
+        #dcfce7 50%,
+        #e5e7eb 75%
+    );
+
+    background-size:200% 100%;
+
+    animation:skeleton-loading 1.5s infinite;
+
+    margin:15px auto;
+
+}
+
+
+.skeleton-line:nth-child(1){
+
+    width:90%;
+
+}
+
+
+.skeleton-line:nth-child(2){
+
+    width:65%;
+
+}
+
+
+.skeleton-line:nth-child(3){
+
+    width:80%;
+
+}
+
+
+.skeleton-line:nth-child(4){
+
+    width:55%;
+
+}
+
+
+@keyframes skeleton-loading{
+
+    0%{
+
+        background-position:200% 0;
+
+    }
+
+    100%{
+
+        background-position:-200% 0;
+
+    }
+
+}
+
+
+/* AI Loading Enhancement */
+
+.ai-loading-card{
+
+    text-align:center;
+
+}
+
+
+.ai-loading-card h2{
+
+    margin-bottom:15px;
+
+}
+
+
+.ai-loading-card .loader{
+
+    display:none;
+
+}
+
+/* ======================================
+   MOBILE SECTION SPACING FIX
+====================================== */
+
+@media(max-width:768px){
+
+    section{
+
+        padding-top:40px;
+        padding-bottom:40px;
+
+    }
+
+}
+/* AI Confidence Final Mobile Override */
+
+@media(max-width:768px){
+
+    .ai-confidence{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+        overflow:hidden;
+    }
+
+    .ai-confidence p{
+        display:block;
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+        white-space:normal;
+        overflow-wrap:break-word;
+        word-wrap:break-word;
+        text-align:center;
+        padding:0 5px;
+    }
+
+}
+
+/* =====================================
+   FINAL AI CONFIDENCE MOBILE FIX
+===================================== */
+
+@media(max-width:768px){
+
+    .ai-confidence{
+        width:100%;
+        max-width:100%;
+        padding:25px 15px;
+        box-sizing:border-box;
+        overflow:hidden;
+    }
+
+
+    .ai-confidence .confidence-top{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:12px;
+        text-align:center;
+    }
+
+
+    .ai-confidence .confidence-top h3{
+
+        width:100%;
+        font-size:18px;
+        white-space:normal;
+        text-align:center;
+
+    }
+
+
+    .ai-confidence .confidence-top strong{
+
+        font-size:24px;
+
+    }
+
+
+    .ai-confidence .confidence-bar{
+
+        width:100%;
+        max-width:100%;
+        margin:20px auto;
+
+    }
+
+
+    .ai-confidence p{
+
+        width:100%;
+        max-width:100%;
+
+        margin:0 auto;
+
+        padding:0 5px;
+
+        box-sizing:border-box;
+
+        font-size:14px;
+
+        line-height:1.6;
+
+        text-align:center;
+
+        white-space:normal;
+
+        overflow-wrap:break-word;
+
+    }
+
+}
+/* =====================================
+   AI CONFIDENCE CONTAINER MOBILE FIX
+===================================== */
+
+@media(max-width:768px){
+
+    .ai-analysis-card,
+    .ai-confidence,
+    .ai-confidence p{
+
+        min-width:0 !important;
+        max-width:100% !important;
+    }
+
+
+    .ai-confidence{
+
+        width:100% !important;
+
+        padding:25px 20px !important;
+
+        box-sizing:border-box !important;
+
+        overflow:hidden !important;
+
+    }
+
+
+    .ai-confidence p{
+
+        display:block !important;
+
+        margin:15px auto 0 !important;
+
+        padding:0 !important;
+
+        font-size:13px !important;
+
+        line-height:1.6 !important;
+
+        text-align:center !important;
+
+        white-space:normal !important;
+
+    }
+
+}
+@media(max-width:768px){
+
+    .ai-confidence{
+
+        padding-left:12px !important;
+        padding-right:12px !important;
+
+    }
+
+}
+/* =====================================
+   FINAL AI CONFIDENCE MOBILE FIX
+===================================== */
+
+@media(max-width:768px){
+
+    .ai-confidence{
+        padding:20px !important;
+        width:100% !important;
+        overflow:hidden !important;
+    }
+
+    .ai-confidence p{
+        font-size:13px !important;
+        line-height:1.5 !important;
+        max-width:100% !important;
+        width:100% !important;
+        margin:10px auto 0 !important;
+        text-align:center !important;
+    }
+
+}
+
+/* =====================================
+   FIX AI CONFIDENCE DESCRIPTION SIZE
+===================================== */
+
+.ai-confidence p{
+
+    font-size:12px !important;
+
+    font-weight:400 !important;
+
+    line-height:1.7 !important;
+
+    color:#64748b !important;
+
+    max-width:600px;
+
+}
+
+
+@media(max-width:768px){
+
+    .ai-confidence p{
+
+        font-size:12px !important;
+
+        line-height:1.6 !important;
+
+        font-weight:400 !important;
+
+    }
 
 }

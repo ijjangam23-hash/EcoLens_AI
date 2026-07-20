@@ -533,8 +533,18 @@ Fill in your lifestyle details to receive an AI-powered carbon footprint analysi
 
 
 
-          <div className="loader"></div>
+         
+<div className="ai-skeleton-container">
 
+    <div className="skeleton-line"></div>
+
+    <div className="skeleton-line"></div>
+
+    <div className="skeleton-line"></div>
+
+    <div className="skeleton-line"></div>
+
+</div>
 
 
 
