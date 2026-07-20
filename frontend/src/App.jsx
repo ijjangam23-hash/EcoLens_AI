@@ -927,36 +927,62 @@ Fill in your lifestyle details to receive an AI-powered carbon footprint analysi
 
     <div className="eco-score-box">
 
-        <div className="score-circle">
+    <div
+        className={`eco-score-card ${
+            result.analysis.eco_score >= 80
+                ? "excellent"
+                : result.analysis.eco_score >= 50
+                ? "moderate"
+                : "poor"
+        }`}
+    >
 
-            <h1>{result.analysis.eco_score}</h1>
+        <span className="eco-score-title">
+            🌱 Eco Score
+        </span>
 
-            <span>/100</span>
+        <h1>
+            {result.analysis.eco_score}
+        </h1>
+
+        <span className="eco-score-outof">
+            /100
+        </span>
+
+        <div className="eco-progress">
+
+            <div
+                className="eco-progress-fill"
+                style={{
+                    width: `${result.analysis.eco_score}%`,
+                }}
+            ></div>
 
         </div>
 
-        <div className="score-info">
+        <div className="eco-status">
 
-            <h3>Eco Score</h3>
-
-            <p>
-                Higher scores indicate a more sustainable lifestyle.
-            </p>
-
-            <div className="score-progress">
-
-                <div
-                    className="score-progress-fill"
-                    style={{
-                        width: `${result.analysis.eco_score}%`,
-                    }}
-                ></div>
-
-            </div>
+            {result.analysis.eco_score >= 80
+                ? "🟢 Excellent Sustainability"
+                : result.analysis.eco_score >= 50
+                ? "🟡 Moderate Sustainability"
+                : "🔴 Needs Improvement"}
 
         </div>
+
+        <p className="eco-description">
+
+            {result.analysis.eco_score >= 80
+                ? "Your lifestyle has a very low environmental impact."
+                : result.analysis.eco_score >= 50
+                ? "A few improvements can significantly reduce emissions."
+                : "Focus on your highest emission source to improve your Eco Score."}
+
+        </p>
 
     </div>
+
+</div>
 
     <div className="impact-status">
 

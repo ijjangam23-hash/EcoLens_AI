@@ -99,22 +99,36 @@ function CarbonChart({ result }) {
 
 
 
-  return (
+ return (
 
-  <div className="chart">
+<div className="chart-card">
 
-    <h2>📊 Carbon Contribution</h2>
+    <div className="chart-header">
 
-    <div className="pie-container">
+        <span className="chart-badge">
+            📊 Carbon Analytics
+        </span>
 
-      <Pie
-        data={data}
-        options={options}
-      />
+        <h2>Carbon Contribution</h2>
+
+        <p>
+            Understand how transport, electricity,
+            food and waste contribute to your
+            monthly carbon footprint.
+        </p>
 
     </div>
 
-  </div>
+    <div className="pie-container">
+
+        <Pie
+            data={data}
+            options={options}
+        />
+
+    </div>
+
+</div>
 
 );
 

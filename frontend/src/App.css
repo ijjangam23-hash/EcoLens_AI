@@ -743,7 +743,7 @@ width:flex;
 
     max-width:1400px;
 
-    margin:120px auto;
+    margin:60px auto;
 
     display:grid;
 
@@ -861,7 +861,7 @@ width:flex;
     width:90%;
     max-width:1200px;
 
-    margin:120px auto;
+    margin:60px auto;
 
     padding:65px;
 
@@ -1193,7 +1193,7 @@ width:flex;
 
     gap:30px;
 
-    margin:50px 0;
+    margin:40px auto;
 
 }
 
@@ -1351,7 +1351,7 @@ width:flex;
 
     width:90%;
     max-width:1200px;
-    margin:70px auto;
+    margin:55px auto;
     padding:50px;
 
     background:#ffffff;
@@ -1772,6 +1772,250 @@ width:flex;
     }
 
 }
+/* ==========================================
+   MOBILE AI CONFIDENCE FIX
+========================================== */
+
+@media (max-width:768px){
+
+    .confidence-top{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        gap:12px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .confidence-top h3{
+
+        font-size:18px;
+font-weight:700;
+        
+
+    }
+
+    .confidence-top strong{
+
+        font-size:22px;
+
+        flex-shrink:0;
+
+    }
+
+    .ai-confidence p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+}
+/* =====================================================
+   PREMIUM ECO SCORE CARD
+===================================================== */
+
+.eco-score-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:40px 0;
+
+}
+
+.eco-score-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.eco-score-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ---------- Dynamic Colors ---------- */
+
+.eco-score-card.excellent{
+
+    box-shadow:
+        0 20px 60px rgba(34,197,94,.20);
+
+}
+
+.eco-score-card.moderate{
+
+    box-shadow:
+        0 20px 60px rgba(245,158,11,.18);
+
+}
+
+.eco-score-card.poor{
+
+    box-shadow:
+        0 20px 60px rgba(239,68,68,.18);
+
+}
+
+/* ---------- Title ---------- */
+
+.eco-score-title{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+/* ---------- Big Score ---------- */
+
+.eco-score-card h1{
+
+    font-size:78px;
+
+    font-weight:900;
+
+    color:#111827;
+
+    margin-bottom:4px;
+
+    line-height:1;
+
+}
+
+.eco-score-outof{
+
+    display:block;
+
+    font-size:20px;
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+}
+
+/* ---------- Progress ---------- */
+
+.eco-progress{
+
+    width:100%;
+
+    height:14px;
+
+    background:#e5e7eb;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:24px;
+
+}
+
+.eco-progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #16a34a
+    );
+
+    transition:width 1.2s ease;
+
+}
+
+/* ---------- Status ---------- */
+
+.eco-status{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    color:#111827;
+
+}
+
+/* ---------- Description ---------- */
+
+.eco-description{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+    max-width:420px;
+
+    margin:auto;
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+    .eco-score-card{
+
+        padding:28px;
+
+    }
+
+    .eco-score-card h1{
+
+        font-size:60px;
+
+    }
+
+}
 /* =====================================================
    PART 8
    AI INTELLIGENCE + ECO SUMMARY
@@ -1783,7 +2027,7 @@ width:flex;
 
     width:100%;
 
-    margin:70px auto;
+    margin:55px auto;
 
     padding:50px;
 
@@ -2290,7 +2534,7 @@ width:flex;
     width:90%;
     max-width:1200px;
 
-    margin:70px auto;
+    margin:55px auto;
 
     padding:50px;
 
@@ -2567,7 +2811,7 @@ width:flex;
 
     max-width:900px;
 
-    margin:60px auto;
+    margin:55px auto;
 
     padding:45px;
 
@@ -2725,19 +2969,27 @@ width:flex;
    CHART SECTION
 ===================================== */
 
+/* =====================================================
+   PREMIUM CHART CARD
+===================================================== */
+
 .chart-card{
 
-    margin:70px auto;
+    width:min(95%,1400px);
+
+    max-width:1100px;
+
+    margin:55px auto;
 
     padding:40px;
 
+    background:#fff;
+
     border-radius:28px;
 
-    background:rgba(255,255,255,.88);
+    border:1px solid rgba(34,197,94,.10);
 
-    backdrop-filter:blur(18px);
-
-    box-shadow:0 25px 70px rgba(0,0,0,.08);
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 }
 
@@ -2755,11 +3007,11 @@ width:flex;
 
     padding:8px 18px;
 
-    border-radius:30px;
+    border-radius:999px;
 
     background:#dcfce7;
 
-    color:#166534;
+    color:#15803d;
 
     font-size:14px;
 
@@ -2771,7 +3023,7 @@ width:flex;
 
 .chart-header h2{
 
-    font-size:36px;
+    font-size:38px;
 
     color:#111827;
 
@@ -2779,6 +3031,33 @@ width:flex;
 
 }
 
+.chart-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+    .chart-card{
+
+        padding:25px;
+
+    }
+
+    .chart-header h2{
+
+        font-size:30px;
+
+    }
+
+}
 .chart-header p{
 
     max-width:650px;
@@ -2907,7 +3186,7 @@ width:flex;
     width:90%;
     max-width:1200px;
 
-    margin:70px auto;
+    margin:55px auto;
 
     padding:50px;
 
@@ -3207,7 +3486,7 @@ width:flex;
     width:90%;
     max-width:1200px;
 
-    margin:70px auto;
+    margin:25px auto;
 
     padding:55px;
 
@@ -3429,7 +3708,7 @@ width:flex;
 
 .footer{
 
-    margin-top:50px;
+    margin-top:30px;
 
     padding:30px 8%;
 
@@ -3933,7 +4212,7 @@ padding-top: 220px;
 
     max-width:850px;
 
-    margin:0 auto 60px;
+    margin:50px auto;
 
 }
 
@@ -4295,10 +4574,10 @@ button:disabled{
 
 .menu-toggle{
     display:none;
-    font-size:28px;
-    color:#fff;
+    font-size:24px;
+    color:#111827;
     cursor:pointer;
-    z-index:1001;
+    z-index:1002;
 }
 
 /* Mobile */
@@ -4314,43 +4593,136 @@ button:disabled{
     }
 
     .nav-links{
-        position:absolute;
-        top:85px;
-        left:0;
-        width:100%;
 
-        background:#064e3b;
+        position:absolute;
+
+        top:75px;
+        right:20px;
+
+        width:260px;
 
         display:flex;
         flex-direction:column;
-        align-items:center;
 
-        gap:25px;
+        background:rgba(255,255,255,.92);
 
-        padding:30px 0;
+        backdrop-filter:blur(18px);
 
-        transform:translateY(-150%);
-        transition:0.35s ease;
+        border:1px solid rgba(34,197,94,.15);
 
-        box-shadow:0 10px 30px rgba(0,0,0,.2);
+        border-radius:22px;
+
+        padding:18px;
+
+        gap:12px;
+
+        box-shadow:
+        0 20px 50px rgba(0,0,0,.15);
+
+        opacity:0;
+        visibility:hidden;
+
+        transform:
+        translateY(-15px)
+        scale(.96);
+
+        transition:.3s ease;
+
+        z-index:1000;
     }
 
+    
+
     .nav-links.active{
-        transform:translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transform:translateY(0)
+        scale(1);
     }
 
     .nav-links li{
         width:100%;
-        text-align:center;
+        list-style:none;
     }
 
     .nav-links a{
+
         display:block;
-        padding:10px;
-        font-size:18px;
+
+        padding:14px 18px;
+
+        border-radius:14px;
+
+        color:#111827;
+
+        font-weight:600;
+
+        text-decoration:none;
+
+        transition:.25s;
+
     }
+
+    .nav-links a:hover{
+
+        background:#22c55e;
+        color:white;
+
+    }
+
+}
 
     .landing-hero{
         padding-top:150px;
     }
+
+    .pie-container{
+
+    position:relative;
+
+    width:100%;
+
+    height:300px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+/* ==========================================
+   PREMIUM SECTION OUTLINES
+========================================== */
+
+.form-card,
+.total-carbon-card,
+.chart-card,
+.ai-analysis-card,
+.eco-summary-card,
+.recommendation-section,
+.simulator-card,
+.pdf-section{
+
+    border:1px solid rgba(34,197,94,.10);
+
+    border-radius:28px;
+
+    transition:all .3s ease;
+
+}
+
+.form-card:hover,
+.total-carbon-card:hover,
+.chart-card:hover,
+.ai-analysis-card:hover,
+.eco-summary-card:hover,
+.recommendation-section:hover,
+.simulator-card:hover,
+.pdf-section:hover{
+
+    border-color:rgba(34,197,94,.25);
+
+    box-shadow:0 25px 60px rgba(34,197,94,.12);
+
 }
