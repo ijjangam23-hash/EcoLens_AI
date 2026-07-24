@@ -1328,64 +1328,38 @@ Fill in your lifestyle details to receive an AI-powered carbon footprint analysi
 
   
 {/* ================= PDF DOWNLOAD ================= */}
-
 <div className="pdf-section">
 
-    <div className="pdf-content">
+  <div className="pdf-content">
 
-        <span className="pdf-badge">
-            📄 Professional Report
-        </span>
+    <span className="pdf-badge">
+      📄 Professional Report
+    </span>
 
-        <h2>Download Your Carbon Report</h2>
+    <h2>Download Your Carbon Report</h2>
 
-        <p>
-            Export a professionally formatted PDF containing your carbon
-            footprint analysis, Eco Score, AI insights, recommendations,
-            and sustainability summary.
-        </p>
-
-    </div>
+    <p>
+      Export a professionally formatted PDF containing your carbon
+      footprint analysis, Eco Score, AI insights, recommendations,
+      and sustainability summary.
+    </p>
 
     <button
-        className="pdf-download-btn"
-        onClick={() => {
-
-            try{
-
-                downloadPDF(result, formData);
-
-            }catch(error){
-
-                console.error(error);
-
-                alert("PDF generation failed.");
-
-            }
-
-        }}
+      className="pdf-btn"
+      onClick={() => downloadPDF(result , formData)}
     >
-
-        📥 Download PDF Report
-
+      📥 Download PDF Report
     </button>
 
+  </div>
+
+  <div className="pdf-image">
+      {/* Your illustration/icon */}
+  </div>
+
 </div>
-
-
-
-
-
-
-
-
-    </section>
-
-
-
-  )}
-
-  
+</section>
+      )}  
   {/* ================= FOOTER ================= */}
 <footer className="footer">
 
