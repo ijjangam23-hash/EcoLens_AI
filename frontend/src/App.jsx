@@ -28,6 +28,7 @@ function App() {
   const [result, setResult] = useState(null);
 
   const [loading, setLoading] = useState(false);
+  const [showShareMenu, setShowShareMenu] = useState(false);
 
   const [error, setError] = useState("");
 // Premium UI States
@@ -139,8 +140,38 @@ useEffect(() => {
 
 
 
+const shareText = () => {
+  return `🌱 EcoLens AI Carbon Footprint Report
 
+🌍 Total Carbon Footprint: ${result?.total_carbon} kg CO₂/month
+🌿 Eco Score: ${result?.analysis?.eco_score}/100
+📊 Highest Contributor: ${result?.analysis?.highest_contributor}
 
+Generated using EcoLens AI`;
+};
+
+const shareWhatsApp = () => {
+  window.open(
+    `https://wa.me/?text=${encodeURIComponent(shareText())}`,
+    "_blank"
+  );
+};
+
+const shareEmail = () => {
+  window.location.href =
+    `mailto:?subject=My EcoLens AI Report&body=${encodeURIComponent(shareText())}`;
+};
+
+const copyReport = async () => {
+  await navigator.clipboard.writeText(shareText());
+  alert("✅ Report copied!");
+};
+
+const copyLink = async () => {
+  await navigator.clipboard.writeText(window.location.href);
+  alert("🔗 Link copied!");
+};
+const [showShareModal, setShowShareModal] = useState(false);
 
   return (
 
@@ -1344,12 +1375,48 @@ Fill in your lifestyle details to receive an AI-powered carbon footprint analysi
       and sustainability summary.
     </p>
 
+   <div className="pdf-buttons">
+
     <button
-      className="pdf-btn"
-      onClick={() => downloadPDF(result , formData)}
+        className="pdf-btn"
+        onClick={() => downloadPDF(result, formData)}
     >
-      📥 Download PDF Report
+        📥 Download PDF Report
     </button>
+
+    <div className="share-container">
+<button
+    className="share-btn"
+    onClick={() => setShowShareModal(true)}
+>
+    📤 Share Results
+</button>
+
+    {showShareMenu && (
+        <div className="share-menu">
+
+            <button onClick={shareWhatsApp}>
+                💬 WhatsApp
+            </button>
+
+            <button onClick={shareEmail}>
+                📧 Email
+            </button>
+
+            <button onClick={copyReport}>
+                📋 Copy Report
+            </button>
+
+            <button onClick={copyLink}>
+                🔗 Copy Link
+            </button>
+
+        </div>
+    )}
+
+</div>
+
+</div>
 
   </div>
 
@@ -1424,6 +1491,171 @@ Fill in your lifestyle details to receive an AI-powered carbon footprint analysi
     </div>
 
 </footer>
+
+{showShareModal && (
+
+<div
+    className="share-overlay"
+    onClick={() => setShowShareModal(false)}
+>
+
+<div
+    className="share-modal"
+    onClick={(e)=>e.stopPropagation()}
+>
+
+<div className="share-header">
+
+<div className="share-title">
+
+<div className="share-icon">
+    🔗
+</div>
+
+<div>
+
+<h2>Share Your Report</h2>
+
+<p>
+Spread awareness and inspire others
+</p>
+
+</div>
+
+</div>
+
+<button
+className="close-btn"
+onClick={()=>setShowShareModal(false)}
+>
+
+✕
+
+</button>
+
+</div>
+
+
+<div className="share-options">
+
+<button
+className="share-option whatsapp"
+onClick={shareWhatsApp}
+>
+
+<div className="option-left">
+
+<div className="option-icon">
+💬
+</div>
+
+<div>
+
+<strong>WhatsApp</strong>
+
+<span>
+Share on WhatsApp
+</span>
+
+</div>
+
+</div>
+
+➜
+
+</button>
+
+
+<button
+className="share-option email"
+onClick={shareEmail}
+>
+
+<div className="option-left">
+
+<div className="option-icon">
+📧
+</div>
+
+<div>
+
+<strong>Email</strong>
+
+<span>
+Send via Email
+</span>
+
+</div>
+
+</div>
+
+➜
+
+</button>
+
+
+<button
+className="share-option copy"
+onClick={copyReport}
+>
+
+<div className="option-left">
+
+<div className="option-icon">
+📄
+</div>
+
+<div>
+
+<strong>Copy Report</strong>
+
+<span>
+Copy report to clipboard
+</span>
+
+</div>
+
+</div>
+
+➜
+
+</button>
+
+
+<button
+className="share-option link"
+onClick={copyLink}
+>
+
+<div className="option-left">
+
+<div className="option-icon">
+🔗
+</div>
+
+<div>
+
+<strong>Copy Link</strong>
+
+<span>
+Copy website link
+</span>
+
+</div>
+
+</div>
+
+➜
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+)}
 </>
 
 
